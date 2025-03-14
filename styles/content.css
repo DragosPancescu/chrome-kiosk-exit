@@ -1,0 +1,54 @@
+.kiosk-exit-button {
+  position: fixed;
+  z-index: 9999;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Position variants */
+.kiosk-exit-button-top-right {
+  top: 20px;
+  right: 20px;
+}
+
+.kiosk-exit-button-top-left {
+  top: 20px;
+  left: 20px;
+}
+
+.kiosk-exit-button-bottom-right {
+  bottom: 20px;
+  right: 20px;
+}
+
+.kiosk-exit-button-bottom-left {
+  bottom: 20px;
+  left: 20px;
+}
+
+/* Size variants */
+.kiosk-exit-button-small {
+  width: 32px;
+  height: 32px;
+  font-size: 32px;
+}
+
+.kiosk-exit-button-medium {
+  width: 48px;
+  height: 48px;
+  font-size: 48px;
+}
+
+.kiosk-exit-button-large {
+  width: 64px;
+  height: 64px;
+  font-size: 64px;
+}
+
+.kiosk-exit-button img {
+  max-width: 70%;
+  max-height: 70%;
+}

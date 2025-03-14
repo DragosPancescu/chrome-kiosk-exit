@@ -1,0 +1,284 @@
+:root {
+    --bs-primary: #1A7B72;
+    --bs-primary-rgb: 26, 123, 114;
+    --bs-link-color: #1A7B72;
+    --bs-link-hover-color: #145e57;
+    --bs-btn-hover-bg: #145e57;
+    --primary-color: #1A7B72;
+    --primary-light: #239990;
+    --primary-dark: #145e57;
+    --primary-very-light: #e6f3f2;
+}
+
+.btn-primary {
+    --bs-btn-bg: var(--bs-primary);
+    --bs-btn-border-color: var(--bs-primary);
+    --bs-btn-hover-bg: #145e57;
+    --bs-btn-hover-border-color: #145e57;
+    --bs-btn-active-bg: #0f4a44;
+    --bs-btn-active-border-color: #0f4a44;
+}
+
+.btn-outline-primary {
+    --bs-btn-color: var(--bs-primary);
+    --bs-btn-border-color: var(--bs-primary);
+    --bs-btn-hover-bg: var(--bs-primary);
+    --bs-btn-hover-border-color: var(--bs-primary);
+    --bs-btn-active-bg: #145e57;
+    --bs-btn-active-border-color: #145e57;
+}
+
+/* Dark Mode Switch Styling */
+.form-check-input:checked {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+
+.form-check-input:focus {
+    border-color: var(--bs-primary);
+    box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25);
+}
+
+/* Style the switch thumb */
+.form-switch .form-check-input:checked::before {
+    background-color: #fff;
+}
+
+.form-switch .form-check-input:checked::after {
+    background-color: #fff;
+}
+
+.form-switch .form-check-input:not(:checked) {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%28238, 103, 1, 1%29'/%3e%3c/svg%3e");
+}
+
+.content-hidden {
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+/* Change focus outline color for inputs */
+input:focus,
+select:focus,
+textarea:focus,
+button:focus,
+.form-control:focus,
+.form-select:focus,
+.form-check-input:focus {
+    border-color: var(--primary-color) !important;
+    box-shadow: 0 0 0 0.25rem rgba(0, 161, 157, 0.25) !important;
+}
+
+/* Change selection background color */
+::selection {
+    background-color: var(--primary-light);
+    color: white;
+}
+
+/* Change dropdown selection highlight */
+.form-select option:checked,
+.form-select option:hover {
+    background-color: var(--primary-color) !important;
+    color: white !important;
+}
+
+/* Custom styling for checkboxes and radio buttons */
+.form-check-input:checked {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+}
+
+/* Custom styling for buttons */
+.btn-primary {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: var(--primary-dark) !important;
+    border-color: var(--primary-dark) !important;
+}
+
+.btn-outline-primary {
+    color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-check:checked+.btn-outline-primary {
+    background-color: var(--primary-color) !important;
+    color: white !important;
+}
+
+/* Custom styling for links */
+a {
+    color: var(--primary-color);
+}
+
+a:hover {
+    color: var(--primary-dark);
+}
+
+/* Custom styling for form range inputs */
+.form-range::-webkit-slider-thumb {
+    background: var(--primary-color) !important;
+}
+
+.form-range::-moz-range-thumb {
+    background: var(--primary-color) !important;
+}
+
+/* Custom styling for dropdown menus */
+.dropdown-item.active,
+.dropdown-item:active {
+    background-color: var(--primary-color) !important;
+}
+
+/* Custom styling for Bootstrap's active states */
+.active {
+    background-color: var(--primary-very-light) !important;
+    color: var(--primary-color) !important;
+}
+
+/* Custom styling for the button group */
+.btn-check:checked+.btn-outline-primary {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    color: white !important;
+}
+
+.form-switch .form-check-input {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba(26, 123, 114, 1)'/%3e%3c/svg%3e") !important;
+}
+
+.form-switch .form-check-input:focus {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba(26, 123, 114, 1)'/%3e%3c/svg%3e") !important;
+}
+
+.form-switch .form-check-input:checked {
+    background-color: #1A7B72 !important;
+    border-color: #1A7B72 !important;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e") !important;
+}
+
+/* Add a softer off-white background for cards in light mode */
+html[data-bs-theme="light"] .card {
+    background-color: #f8f9fa !important;
+    /* Light gray */
+}
+
+html[data-bs-theme="light"] .card-body {
+    background-color: #f8f9fa !important;
+}
+
+/* Make the main background slightly off-white in light mode */
+html[data-bs-theme="light"] body {
+    background-color: #f0f2f5 !important;
+    /* Slightly darker off-white for contrast */
+}
+
+html[data-bs-theme="light"] .preview-container {
+    color: #f0f2f5 !important;
+    /* Keep this white for contrast with the card */
+}
+
+/* Soften input backgrounds in light mode */
+html[data-bs-theme="light"] .form-control,
+html[data-bs-theme="light"] .form-select,
+html[data-bs-theme="light"] .input-group-text,
+html[data-bs-theme="light"] .form-check-input {
+    background-color: #f8f9fa !important;
+    border-color: #dee2e6 !important;
+}
+
+/* Add a subtle hover effect for inputs */
+html[data-bs-theme="light"] .form-control:hover,
+html[data-bs-theme="light"] .form-select:hover {
+    background-color: #f0f2f5 !important;
+}
+
+/* Keep focus state with white background for better visibility */
+html[data-bs-theme="light"] .form-control:focus,
+html[data-bs-theme="light"] .form-select:focus {
+    background-color: #ffffff !important;
+    border-color: var(--primary-color) !important;
+}
+
+/* Style file input specifically */
+html[data-bs-theme="light"] input[type="file"].form-control {
+    background-color: #f8f9fa !important;
+}
+
+/* Style color input */
+html[data-bs-theme="light"] input[type="color"].form-control {
+    background-color: #f8f9fa !important;
+    padding: 0.25rem;
+}
+
+#buttonColor {
+    width: 60px !important;
+    flex: 0 0 auto !important;
+}
+
+/* Preview styling */
+/* Size variants */
+.small {
+    width: 32px;
+    height: 32px;
+    font-size: 32px;
+}
+
+.medium {
+    width: 48px;
+    height: 48px;
+    font-size: 48px;
+}
+
+.large {
+    width: 64px;
+    height: 64px;
+    font-size: 64px;
+}
+
+/* Position variants */
+
+.kiosk-exit-button-preview {
+    position: absolute;
+    z-index: 9999;
+    border-radius: 50%;
+    /* cursor: pointer; */
+    display: flex;
+    align-items: center;
+}
+
+.top-right {
+    top: 20px;
+    right: 20px;
+}
+
+.top-left {
+    top: 20px;
+    left: 20px;
+}
+
+.bottom-right {
+    bottom: 20px;
+    right: 20px;
+}
+
+.bottom-left {
+    bottom: 20px;
+    left: 20px;
+}
+
+/* Divider styling - default for dark mode */
+.divider {
+    border-color: var(--primary-very-light);
+}
+
+/* Light mode divider styling to match the preview container border */
+html[data-bs-theme="light"] .divider {
+    border-color: #c4c8cb !important;
+}

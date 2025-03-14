@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "Kiosk Exit Button",
+  "version": "1.0",
+  "description": "Adds a configurable exit button to Chrome in kiosk mode",
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/icon16.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+    }
+  },
+  "permissions": [
+    "storage",
+    "scripting",
+    "tabs",
+    "windows"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "options_page": "options.html",
+  "web_accessible_resources": [
+    {
+      "resources": ["images/default.png"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

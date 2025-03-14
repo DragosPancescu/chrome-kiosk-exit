@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!-- saved from url=(0080)chrome-extension://beiohngbkccmobjkmacejiejiemhemmj/options.html?buttonType=text -->
+<html data-bs-theme="light"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+		<title>Kiosk Exit Button Options</title>
+		<!-- Bootstrap CSS -->
+		<link href="./Kiosk Exit Button Options_files/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+		<!-- Bootstrap JS -->
+		<script src="./Kiosk Exit Button Options_files/bootstrap.bundle.min.js.download" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="chrome-extension://beiohngbkccmobjkmacejiejiemhemmj/styles/options.css">
+	</head>
+	<body>
+        <!-- Dark Mode Switch -->
+        <div class="pt-2 pe-3 form-check form-switch float-end">
+            <input class="form-check-input" type="checkbox" id="darkModeSwitch" checked="">
+            <label class="form-check-label" for="darkModeSwitch">Dark Mode</label>
+        </div>
+
+		<div class="container">
+			<h1 class="pb-4 pt-2 text-center">Kiosk Exit Button Configuration</h1>
+
+			<form class="mx-auto" style="max-width: 600px">
+				<!-- Button Type -->
+				<div class="mb-4">
+					<label class="form-label h5">Button Type</label>
+					<div class="btn-group" role="group">
+						<input type="radio" class="btn-check" name="buttonType" id="textType" value="text" checked="">
+						<label class="btn btn-outline-primary" for="textType">Text</label>
+
+						<input type="radio" class="btn-check" name="buttonType" id="imageType" value="image">
+						<label class="btn btn-outline-primary" for="imageType">Image</label>
+					</div>
+				</div>
+
+				<!-- Text Options -->
+				<div class="mb-4" id="textOptions" style="display: block;">
+					<label for="buttonText" class="form-label h5">Button Text</label>
+					<input type="text" class="form-control" id="buttonText" placeholder="X" maxlength="16">
+				</div>
+
+				<!-- Image Options -->
+				<div class="mb-4" id="imageOptions" style="display: none">
+					<label class="form-label h5">Button Image</label>
+					<div class="image-selector">
+						<div class="current-image mb-2">
+							<img id="currentImage" src="chrome-extension://beiohngbkccmobjkmacejiejiemhemmj/images/default-exit.png" alt="Exit Button" class="img-thumbnail">
+						</div>
+						<div class="input-group">
+							<input type="file" class="form-control" id="imageUpload" accept="image/*">
+							<button class="btn btn-primary" type="button" id="uploadButton">
+								Upload
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<!-- Button Position -->
+				<div class="mb-4">
+					<label for="buttonPosition" class="form-label h5">Button Position</label>
+					<select class="form-select" id="buttonPosition">
+						<option value="top-right">Top Right</option>
+						<option value="top-left">Top Left</option>
+						<option value="bottom-right">Bottom Right</option>
+						<option value="bottom-left">Bottom Left</option>
+					</select>
+				</div>
+
+				<!-- Button Size -->
+				<div class="mb-4">
+					<label for="buttonSize" class="form-label h5">Button Size</label>
+					<select class="form-select" id="buttonSize">
+						<option value="small">Small</option>
+						<option value="medium" selected="">Medium</option>
+						<option value="large">Large</option>
+					</select>
+				</div>
+
+				<!-- Preview -->
+				<div class="mb-4">
+					<label class="form-label h5">Preview</label>
+					<div class="preview-container border p-3">
+						<div id="buttonPreview" class="kiosk-exit-button top-right medium">Close Button</div>
+					</div>
+				</div>
+
+				<!-- Actions -->
+				<div class="d-flex gap-2 align-items-center">
+					<button type="button" class="btn btn-primary" id="save">
+						Save Settings
+					</button>
+				</div>
+
+                <div class="alert alert-success mt-4 p-2 d-none" role="alert" id="status">
+                    <strong>Success!</strong> Your settings have been saved.
+                    <button type="button" class="btn-close float-end" id="statusClose" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+			</form>
+		</div>
+
+
+		<script src="chrome-extension://beiohngbkccmobjkmacejiejiemhemmj/options.js"></script>
+	
+
+</body></html>
