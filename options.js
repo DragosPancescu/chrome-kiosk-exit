@@ -54,6 +54,8 @@ document.addEventListener('DOMContentLoaded', () => {
     buttonColor.addEventListener('input', updatePreview);
     buttonPosition.addEventListener('change', updatePreview);
     buttonSize.addEventListener('change', updatePreview);
+    buttonAutoHideDelay.addEventListener('input', validateAutoHideDelay);
+    buttonAutoHideDelay.addEventListener('blur', validateAutoHideDelay);
     saveButton.addEventListener('click', saveSettings);
 });
 
@@ -76,6 +78,20 @@ function setTheme() {
             localStorage.setItem('bsTheme', 'light');
         }
     });
+}
+
+function validateAutoHideDelay() {
+    const value = parseInt(this.value, 10);
+    if (value < 0 || value > 300) {
+        this.setCustomValidity('Value must be between 0 and 300');
+        document.getElementById('save').disabled = true;
+    } else {
+        this.setCustomValidity('');
+        document.getElementById('save').disabled = false;
+    }
+
+    // Triggering browser's built-in validation to show error message
+    this.reportValidity();
 }
 
 // Load saved settings

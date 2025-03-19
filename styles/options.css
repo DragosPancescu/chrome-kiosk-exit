@@ -247,8 +247,6 @@ html[data-bs-theme="light"] input[type="color"].form-control {
 .kiosk-exit-button-preview {
     position: absolute;
     z-index: 9999;
-    border-radius: 50%;
-    /* cursor: pointer; */
     display: flex;
     align-items: center;
 }
@@ -281,4 +279,11 @@ html[data-bs-theme="light"] input[type="color"].form-control {
 /* Light mode divider styling to match the preview container border */
 html[data-bs-theme="light"] .divider {
     border-color: #c4c8cb !important;
+}
+
+#buymeacoffee {
+    position: fixed;
+    z-index: 9999;
+    bottom: 20px;
+    left: 20px;
 }

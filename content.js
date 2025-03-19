@@ -5,7 +5,7 @@ if (!document.getElementById("kiosk-exit-button")) {
 		{
 			buttonType: "text", // Default to text
 			buttonText: "X", // Default text
-			buttonColor: "#FFFFFF",
+			buttonColor: "#1A7B72", // Default color
 			buttonImage: "default", // Default image flag
 			buttonPosition: "top-right", // Default position
 			buttonSize: "small", // Default size

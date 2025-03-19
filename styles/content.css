@@ -1,11 +1,11 @@
 .kiosk-exit-button {
   position: fixed;
   z-index: 9999;
-  border-radius: 50%;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: var(--bs-font-sans-serif) !important;
 }
 
 /* Position variants */
