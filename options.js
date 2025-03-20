@@ -57,6 +57,8 @@ document.addEventListener('DOMContentLoaded', () => {
     buttonAutoHideDelay.addEventListener('input', validateAutoHideDelay);
     buttonAutoHideDelay.addEventListener('blur', validateAutoHideDelay);
     saveButton.addEventListener('click', saveSettings);
+    window.addEventListener('resize', updateZoom);
+    window.addEventListener('load', updateZoom);
 });
 
 // Light mode and dark mode switch
@@ -236,4 +238,8 @@ function saveSettings() {
             toastInstance.show();
         }
     });
+}
+
+function updateZoom() {
+    document.documentElement.style.setProperty('--zoom-factor', window.devicePixelRatio || 1);
 }

@@ -1,6 +1,11 @@
 // This function runs in the context of the web page to check for kiosk-specific characteristics
-function checkKioskCharacteristics() {
-    return true;
+function isKioskMode() {
+    return chrome.management.getSelf().then(app => {
+        return app.launchType === "OPEN_FULL_SCREEN";
+    }).catch(error => {
+        console.error("Error checking if in Kiosk mode:", error);
+        return false;
+    });
 }
 
 function injectKioskExitButton(tabId) {
@@ -17,7 +22,17 @@ function injectKioskExitButton(tabId) {
     ]);
 }
 
-function checkKioskMode() {
+async function injectCloseButton() {
+    let isOpenKioskMode = false;
+    isKioskMode().then(isKiosk => {
+        isOpenKioskMode = isKiosk;
+    });
+
+    if (!isOpenKioskMode) {
+        console.log("Not in Kiosk mode, won't inject close button.");
+        return
+    }
+
     chrome.windows.getCurrent().then(window => {
         return chrome.tabs.query({ active: true, currentWindow: true });
     }).then(tabs => {
@@ -36,7 +51,7 @@ function checkKioskMode() {
             console.warn("Skipping script injection for restricted URL:", tabs[0]?.url);
         }
     }).catch(error => {
-        console.error("Error in kiosk mode check:", error);
+        console.error("Error in kiosk mode close button injection:", error);
     });
 }
 
@@ -53,15 +68,15 @@ function closeKioskWindow(sendResponse) {
 }
 
 chrome.runtime.onStartup.addListener(() => {
-    checkKioskMode();
+    injectCloseButton();
 });
 
 chrome.runtime.onInstalled.addListener(() => {
-    checkKioskMode();
+    injectCloseButton();
 });
 
 chrome.tabs.onUpdated.addListener(() => {
-    checkKioskMode();
+    injectCloseButton();
 });
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {

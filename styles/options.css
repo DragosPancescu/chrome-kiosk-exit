@@ -225,20 +225,20 @@ html[data-bs-theme="light"] input[type="color"].form-control {
 /* Preview styling */
 /* Size variants */
 .small {
-    width: 32px;
-    height: 32px;
+    width: min(3vw, 3vh);
+    height: min(3vw, 3vh);
     font-size: 32px;
 }
 
 .medium {
-    width: 48px;
-    height: 48px;
+    width: min(4vw, 4vh);
+    height: min(4vw, 4vh);
     font-size: 48px;
 }
 
 .large {
-    width: 64px;
-    height: 64px;
+    width: min(5vw, 5vh);
+    height: min(5vw, 5vh);
     font-size: 64px;
 }
 

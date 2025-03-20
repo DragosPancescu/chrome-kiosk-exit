@@ -1,5 +1,11 @@
+function updateZoom() {
+    document.documentElement.style.setProperty('--zoom-factor', window.devicePixelRatio || 1);
+}
+
 // Check if we've already added the button to avoid duplicates
 if (!document.getElementById("kiosk-exit-button")) {
+	window.addEventListener('resize', updateZoom);
+    window.addEventListener('load', updateZoom);
 	// Fetch stored configuration
 	chrome.storage.local.get(
 		{
