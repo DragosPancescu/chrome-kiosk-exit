@@ -112,15 +112,6 @@ button:focus,
     color: white !important;
 }
 
-/* Custom styling for links */
-a {
-    color: var(--primary-color);
-}
-
-a:hover {
-    color: var(--primary-dark);
-}
-
 /* Custom styling for form range inputs */
 .form-range::-webkit-slider-thumb {
     background: var(--primary-color) !important;
@@ -218,8 +209,9 @@ html[data-bs-theme="light"] input[type="color"].form-control {
 }
 
 #buttonColor {
-    width: 60px !important;
-    flex: 0 0 auto !important;
+    width: 60px;
+    height: 37.6px;
+    flex: 0 0 auto;
 }
 
 /* Preview styling */

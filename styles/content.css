@@ -1,49 +1,49 @@
 .kiosk-exit-button {
-    position: fixed;
-    z-index: 9999;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: fixed !important;
+    z-index: 9999 !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
     font-family: var(--bs-font-sans-serif) !important;
 }
 
 /* Position variants */
 .kiosk-exit-button-top-right {
-    top: 20px;
-    right: 20px;
+    top: 20px !important;
+    right: 20px !important;
 }
 
 .kiosk-exit-button-top-left {
-    top: 20px;
-    left: 20px;
+    top: 20px !important;
+    left: 20px !important;
 }
 
 .kiosk-exit-button-bottom-right {
-    bottom: 20px;
-    right: 20px;
+    bottom: 20px !important;
+    right: 20px !important;
 }
 
 .kiosk-exit-button-bottom-left {
-    bottom: 20px;
-    left: 20px;
+    bottom: 20px !important;
+    left: 20px !important;
 }
 
 /* Size variants */
 .kiosk-exit-button-small {
-    width: min(3vw, 3vh);
-    height: min(3vw, 3vh);
-    font-size: 32px;
+    width: min(3vw, 3vh) !important;
+    height: min(3vw, 3vh) !important;
+    font-size: 32px !important;
 }
 
 .kiosk-exit-button-medium {
-    width: min(4vw, 4vh);
-    height: min(4vw, 4vh);
-    font-size: 48px;
+    width: min(4vw, 4vh) !important;
+    height: min(4vw, 4vh) !important;
+    font-size: 48px !important;
 }
 
 .kiosk-exit-button-large {
-    width: min(5vw, 5vh);
-    height: min(5vw, 5vh);
-    font-size: 64px;
+    width: min(5vw, 5vh) !important;
+    height: min(5vw, 5vh) !important;
+    font-size: 64px !important;
 }

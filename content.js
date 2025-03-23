@@ -9,7 +9,7 @@ if (!document.getElementById("kiosk-exit-button")) {
 	// Fetch stored configuration
 	chrome.storage.local.get(
 		{
-			buttonType: "text", // Default to text
+			buttonType: "image", // Default to image
 			buttonText: "X", // Default text
 			buttonColor: "#1A7B72", // Default color
 			buttonImage: "default", // Default image flag
@@ -43,7 +43,7 @@ if (!document.getElementById("kiosk-exit-button")) {
 			// Add click event to close the window
             exitButton.addEventListener("click", () => {
                 // Use Chrome's extension API to close the current window
-                chrome.runtime.sendMessage({ action: "closeKioskWindow" })
+                chrome.runtime.sendMessage({ action: "CLOSE_KIOSK_WINDOW" })
                     .catch(error => {
                         // This error is expected when the window closes
                         console.log("Window closed");

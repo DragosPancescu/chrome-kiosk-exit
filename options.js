@@ -99,7 +99,7 @@ function validateAutoHideDelay() {
 // Load saved settings
 function loadSettings() {
     chrome.storage.local.get({
-        buttonType: 'text',
+        buttonType: 'image',
         buttonText: 'X',
         buttonColor: '#1A7B72',
         buttonImage: 'default',
