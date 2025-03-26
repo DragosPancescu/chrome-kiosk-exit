@@ -1,10 +1,11 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![Chrome Web Store Users](https://img.shields.io/chrome-web-store/users/daliphodbodnmaljedemmkdlafkoopal)
 
 # Chrome Kiosk Exit Button Extension <img src="images/icon128.png" alt="Icon" width="64"> 
 
 A simple Chrome extension that adds a customizable exit button to a kiosk window.
 
-Download from: **TBA**
+Download from: [Chrome Web Store](https://chromewebstore.google.com/detail/kiosk-exit-button/daliphodbodnmaljedemmkdlafkoopal)
 
 ## Features
 
