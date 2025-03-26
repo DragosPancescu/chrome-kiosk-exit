@@ -1,7 +1,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![Chrome Web Store Users](https://img.shields.io/chrome-web-store/users/daliphodbodnmaljedemmkdlafkoopal)
 
-# Chrome Kiosk Exit Button Extension <img src="images/icon128.png" alt="Icon" width="64"> 
+<h1>Chrome Kiosk Exit Button Extension <img align="center" width="64" src="images/icon128.png"></h3>
 
 A simple Chrome extension that adds a customizable exit button to a kiosk window.
 
@@ -29,10 +29,6 @@ The extension requires access to all websites to inject the exit button. It **do
 2. Open Chrome and navigate to `chrome://extensions/`.
 3. Enable **Developer Mode** (toggle in the top-right corner).
 4. Click **Load unpacked** and select the cloned folder.
-
-## Screenshots
-
-**TBA**
 
 ## Feedback
 
