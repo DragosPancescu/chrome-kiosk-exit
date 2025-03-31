@@ -1,7 +1,6 @@
 // This function runs in the context of the web page to check for kiosk-specific characteristics
 function isKioskMode() {
     return new Promise((resolve, reject) => {
-        resolve(true)
         chrome.windows.getCurrent((win) => {
             if (chrome.runtime.lastError) {
                 reject(new Error(`Error getting window: ${chrome.runtime.lastError}`));
