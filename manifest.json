@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Kiosk Exit Button",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Adds a configurable exit button to Chrome in kiosk mode",
   "icons": {
     "16": "images/icon16.png",

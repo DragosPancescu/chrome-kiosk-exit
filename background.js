@@ -1,9 +1,10 @@
 // This function runs in the context of the web page to check for kiosk-specific characteristics
 function isKioskMode() {
     return new Promise((resolve, reject) => {
+        resolve(true)
         chrome.windows.getCurrent((win) => {
             if (chrome.runtime.lastError) {
-                reject(new Error("Error getting window: " + chrome.runtime.lastError));
+                reject(new Error(`Error getting window: ${chrome.runtime.lastError}`));
                 return;
             }
 
@@ -47,20 +48,20 @@ function injectCloseButton() {
             isKioskMode()
                 .then((isKioskModeOpen) => {
                     if (isKioskModeOpen) {
-                        console.log("Injecting into:", tabs[0].url);
+                        console.log(`Injecting into: ${tabs[0].url}`);
                         return injectKioskExitButton(tabs[0].id);
                     } else {
                         console.log("Not in Kiosk mode, won't inject the Kiosk Close Button.")
                     }
                 })
                 .catch((error) => {
-                    console.error("Error while checking Kiosk mode:", error);
+                    console.error(`Error while checking Kiosk mode: ${error}`);
                 });
         } else {
-            console.warn("Skipping script injection for restricted URL:", tabs[0]?.url);
+            console.warn(`Skipping script injection for restricted URL: ${tabs[0]?.url}`);
         }
     }).catch(error => {
-        console.error("Error in kiosk mode Kiosk Close Button injection:", error);
+        console.error(`Error in kiosk mode Kiosk Close Button injection: ${error}`);
     });
 }
 
@@ -71,7 +72,7 @@ function closeKioskWindow(sendResponse) {
             return chrome.windows.remove(win.id);
         });
     }).catch(error => {
-        console.error("Error closing kiosk window:", error);
+        console.error(`Error closing kiosk window: ${error}`);
     });
     return true;
 }
