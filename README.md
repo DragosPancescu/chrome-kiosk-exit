@@ -3,7 +3,7 @@
 
 <h1>Chrome Kiosk Exit Button Extension <img align="center" width="64" src="images/icon128.png"></h3>
 
-A simple Chrome extension that adds a customizable exit button to a kiosk window.
+> A simple Chrome extension that adds a customizable exit button to a kiosk window.
 
 Download from: [Chrome Web Store](https://chromewebstore.google.com/detail/kiosk-exit-button/daliphodbodnmaljedemmkdlafkoopal)
 
