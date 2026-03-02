@@ -6,6 +6,7 @@
     align-items: center !important;
     justify-content: center !important;
     font-family: var(--bs-font-sans-serif) !important;
+    transition: opacity 0.5s !important;
 }
 
 /* Position variants */

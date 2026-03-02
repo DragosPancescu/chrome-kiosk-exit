@@ -84,12 +84,19 @@ chrome.runtime.onInstalled.addListener(() => {
     injectCloseButton();
 });
 
-chrome.tabs.onUpdated.addListener(() => {
-    injectCloseButton();
+chrome.tabs.onUpdated.addListener((tabId, changeInfo) => {
+    if (changeInfo.status === "complete") {
+        injectCloseButton();
+    }
 });
 
 chrome.runtime.onMessage.addListener((message, _, sendResponse) => {
     if (message.action === "CLOSE_KIOSK_WINDOW") {
-        closeKioskWindow(sendResponse)
+        closeKioskWindow(sendResponse);
+    } else if (message.action === "IS_KIOSK_MODE") {
+        isKioskMode()
+            .then(result => sendResponse({ isKiosk: result }))
+            .catch(() => sendResponse({ isKiosk: false }));
+        return true; // keep channel open for async response
     }
 });

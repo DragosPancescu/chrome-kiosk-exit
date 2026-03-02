@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <title>Kiosk Exit Button Options</title>
@@ -75,7 +75,7 @@
                             <div class="mb-4" id="textOptions" style="display: none">
                                 <label class="form-label h5">Button Text & Color</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" id="buttonText" placeholder="X" maxlength="16" />
+                                    <input type="text" class="form-control" id="buttonText" placeholder="X" maxlength="16" spellcheck="false" />
                                     <input type="color" class="form-control form-control-color" id="buttonColor" value="#FFFFFF" title="Choose text color" />
                                 </div>
                             </div>
@@ -85,9 +85,9 @@
                                 <label class="form-label h5">Button Image</label>
                                 <div class="input-group">
                                     <input type="file" class="form-control" id="imageUpload" accept="image/*" />
-                                    <button class="btn btn-primary" type="button" id="uploadButton">Upload</button>
                                     <button class="btn btn-secondary" type="button" id="resetImageButton">Reset to Default</button>
                                 </div>
+                                <small class="form-text text-muted">Maximum file size: 5 MB.</small>
                             </div>
 
                             <!-- Button Position -->

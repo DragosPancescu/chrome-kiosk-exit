@@ -20,7 +20,6 @@ if (!document.getElementById("kiosk-exit-button")) {
         const exitButton = document.createElement("div");
         exitButton.id = "kiosk-exit-button";
         exitButton.className = `kiosk-exit-button kiosk-exit-button-${config.buttonPosition} kiosk-exit-button-${config.buttonSize}`;
-        exitButton.style.transition = "opacity 0.5s";  // Smooth fade-out effect
 
         // Apply configuration
         if (config.buttonType === "image" && config.buttonImage) {
@@ -44,22 +43,30 @@ if (!document.getElementById("kiosk-exit-button")) {
         // Auto-hide logic
         if (config.buttonAutoHideDelay > 0) {
             let hideTimeout;
+            let lastMove = 0;
 
             document.addEventListener('mousemove', () => {
-                // Show button immediately
+                // Skip if < 50ms since last handled event
+                const now = Date.now();
+                if (now - lastMove < 50) return;
+
+                lastMove = now;
+
                 exitButton.style.opacity = "1";
-
-                // Reset any existing timeout
                 clearTimeout(hideTimeout);
-
-                // Set new timeout to hide the button
                 hideTimeout = setTimeout(() => {
                     exitButton.style.opacity = "0";
                 }, config.buttonAutoHideDelay * 1000);
             });
         }
 
-        // Add to the document
+        // Add to the document, then fade in
+        exitButton.style.opacity = "0";
         document.body.appendChild(exitButton);
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+                exitButton.style.opacity = "1";
+            });
+        });
     });
 }

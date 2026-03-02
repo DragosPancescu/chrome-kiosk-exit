@@ -5,7 +5,6 @@ const buttonColor = document.getElementById('buttonColor');
 const imageOptions = document.getElementById('imageOptions');
 const buttonTextInput = document.getElementById('buttonText');
 const imageUpload = document.getElementById('imageUpload');
-const uploadButton = document.getElementById('uploadButton');
 const currentImage = document.getElementById('currentImage');
 const buttonPosition = document.getElementById('buttonPosition');
 const buttonSize = document.getElementById('buttonSize');
@@ -40,10 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
     for (const radio of buttonTypeRadios) {
         radio.addEventListener('change', toggleOptions);
     }
-
-    uploadButton.addEventListener('click', () => {
-        imageUpload.click();
-    });
 
     imageUpload.addEventListener('change', handleImageUpload);
 
@@ -154,6 +149,14 @@ function toggleOptions() {
 // Handle image upload
 function handleImageUpload() {
     const file = imageUpload.files[0];
+    if (!file) return;
+
+    if (file.size > 5_000_000) {
+        alert("Image too large. Please use an image under 5 MB.");
+        imageUpload.value = "";
+        return;
+    }
+
     if (file) {
         const reader = new FileReader();
         reader.onload = (e) => {
