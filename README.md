@@ -22,21 +22,11 @@ The extension requires access to all websites to inject the exit button. It **do
 
 ## Local Installation
 
-### From Releases (recommended)
 1. Go to the [Releases](https://github.com/DragosPancescu/chrome-kiosk-exit/releases) page and download the latest `.zip` file.
 2. Extract the `.zip` file to a folder.
 3. Open Chrome and navigate to `chrome://extensions/`.
 4. Enable **Developer Mode** (toggle in the top-right corner).
 5. Click **Load unpacked** and select the extracted folder.
-
-### From Source
-1. Clone the repository:
-```sh
-   git clone https://github.com/DragosPancescu/chrome-kiosk-exit.git
-```
-2. Open Chrome and navigate to `chrome://extensions/`.
-3. Enable **Developer Mode** (toggle in the top-right corner).
-4. Click **Load unpacked** and select the cloned folder.
 
 ## Feedback
 
