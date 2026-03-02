@@ -3,22 +3,24 @@
 
 <h1>Chrome Kiosk Exit Button Extension <img align="center" width="64" src="images/icon128.png"></h3>
 
-> A simple Chrome extension that adds a customizable exit button to a kiosk window.
+> A simple Chrome extension that adds a customizable exit button to kiosk mode windows.
 
 Download from: [Chrome Web Store](https://chromewebstore.google.com/detail/kiosk-exit-button/daliphodbodnmaljedemmkdlafkoopal)
 
-## Features
+## Configurable settings
 
-- **Type**: Choose between text or image for the button.
-- **Contents**: Define text color or upload an image.
-- **Position**: Place the button anywhere on the screen.
-- **Size**: Adjust the button dimensions to fit your needs.
-- **Auto-hide Timer**: Set inactivity time (in seconds) before the button disappears.
-- **Local Storage**: Stores configuration locally for persistence.
+> Settings are saved locally using Chrome's storage API and persist across sessions.
+
+- **Type** - Text or image button
+- **Text & Color** - Set the label and text color
+- **Image** - Upload a custom image (up to 5 MB)
+- **Position** - Place the button in any corner of the screen
+- **Size** - Small, Medium, or Large
+- **Auto-hide** - Button fades out after a set period of inactivity and reappears on mouse movement
 
 ## Permissions
 
-The extension requires access to all websites to inject the exit button. It **does not** store any personal data beyond the user-defined configuration.
+The extension requires access to all websites in order to inject the exit button. No browsing data is collected or transmitted, only your button configuration is stored locally.
 
 ## Local Installation
 
@@ -30,7 +32,8 @@ The extension requires access to all websites to inject the exit button. It **do
 
 ## Feedback
 
-Have suggestions or found an issue? Open an [issue](https://github.com/DragosPancescu/chrome-kiosk-exit/issues) or leave feedback. If time allows, I will add or fix features based on requests.
+Have suggestions or found an issue? Open an [issue](https://github.com/DragosPancescu/chrome-kiosk-exit/issues) or leave feedback. 
+Feedback and feature requests are welcome.
 
 ## License
 
