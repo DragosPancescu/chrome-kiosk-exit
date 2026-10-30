@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Kiosk Exit Button",
-  "version": "0.1.2",
-  "description": "Adds a configurable exit button to Chrome in kiosk mode",
+  "name": "Kiosk Exit Button: Close Chrome Kiosk Mode Without a Keyboard",
+  "version": "1.0.0",
+  "description": "Add an on-screen close button to Chrome kiosk mode. Exit with one click, no keyboard shortcuts needed. Customizable, auto-hides.",
   "icons": {
     "16": "images/icon16.png",
     "48": "images/icon48.png",
@@ -23,7 +23,6 @@
     "storage",
     "scripting",
     "tabs",
-    "windows",
     "system.display"
   ],
   "host_permissions": [

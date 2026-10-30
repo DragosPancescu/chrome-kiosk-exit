@@ -21,7 +21,8 @@
             aria-atomic="true">
             <div class="d-flex">
                 <div class="toast-body">
-                    <strong>Success!</strong> Your settings have been saved.
+                    <strong id="statusTitle">Success!</strong> <span id="statusMessage">Your settings have been
+                        saved.</span>
                 </div>
                 <button type="button" class="btn-close btn-close-white me-2 m-auto" id="statusClose"
                     data-bs-dismiss="toast" aria-label="Close"></button>
@@ -30,13 +31,13 @@
     </div>
 
     <!-- Dark Mode Switch -->
-    <li class="nav-item align-items-center d-flex float-end pt-2 pe-2">
+    <div class="align-items-center d-flex float-end pt-2 pe-2">
         <i class="fas fa-sun"></i>
         <div class="ms-2 form-check form-switch">
             <input class="form-check-input" type="checkbox" role="switch" id="darkModeSwitch" />
         </div>
         <i class="fas fa-moon"></i>
-    </li>
+    </div>
 
     <a id="buymeacoffee" href="https://www.buymeacoffee.com/dragos.pancescu" target="_blank" rel="noopener noreferrer">
         <img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=dragos.pancescu&button_colour=FFDD00&font_colour=000000&font_family=Poppins&outline_colour=000000&coffee_colour=ffffff" />
@@ -60,12 +61,12 @@
                             <div class="mb-4">
                                 <label class="form-label h5 pe-2">Button Type</label>
                                 <div class="btn-group" role="group">
-                                    <input type="radio" class="btn-check" name="buttonType" id="textType" value="text"
-                                        checked />
+                                    <input type="radio" class="btn-check" name="buttonType" id="textType"
+                                        value="text" />
                                     <label class="btn btn-outline-primary" for="textType">Text</label>
 
                                     <input type="radio" class="btn-check" name="buttonType" id="imageType"
-                                        value="image" />
+                                        value="image" checked />
                                     <label class="btn btn-outline-primary" for="imageType">Image</label>
                                 </div>
                             </div>
@@ -76,7 +77,7 @@
                                 <label class="form-label h5">Button Text & Color</label>
                                 <div class="input-group">
                                     <input type="text" class="form-control" id="buttonText" placeholder="X" maxlength="16" spellcheck="false" />
-                                    <input type="color" class="form-control form-control-color" id="buttonColor" value="#FFFFFF" title="Choose text color" />
+                                    <input type="color" class="form-control form-control-color" id="buttonColor" value="#1A7B72" title="Choose text color" />
                                 </div>
                             </div>
 

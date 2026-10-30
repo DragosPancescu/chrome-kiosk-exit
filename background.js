@@ -1,28 +1,35 @@
-// This function runs in the context of the web page to check for kiosk-specific characteristics
-function isKioskMode() {
-    return new Promise((resolve, reject) => {
-        chrome.windows.getCurrent((win) => {
-            if (chrome.runtime.lastError) {
-                reject(new Error(`Error getting window: ${chrome.runtime.lastError}`));
-                return;
-            }
+// Picks the display a window actually sits on, so multi-monitor setups are measured
+// against the right screen. Falls back to the primary display.
+function findDisplayForWindow(displays, win) {
+    const centerX = (win.left ?? 0) + (win.width ?? 0) / 2;
+    const centerY = (win.top ?? 0) + (win.height ?? 0) / 2;
 
-            chrome.system.display.getInfo((displays) => {
-                if (!displays || displays.length === 0) {
-                    reject(new Error("Error getting display info."));
-                    return;
-                }
+    const containing = displays.find(({ bounds }) => (
+        centerX >= bounds.left && centerX < bounds.left + bounds.width &&
+        centerY >= bounds.top && centerY < bounds.top + bounds.height
+    ));
 
-                const screenWidth = displays[0].bounds.width;
-                const screenHeight = displays[0].bounds.height;
+    return containing || displays.find(display => display.isPrimary) || displays[0];
+}
 
-                const isFullscreen = win.state === "fullscreen";
-                const outerMatch = win.width === screenWidth && win.height === screenHeight;
+// Checks whether a window looks like it is running in kiosk mode.
+// Pass a windowId to check a specific window, or omit it to check the focused one.
+async function isKioskMode(windowId) {
+    const win = typeof windowId === "number"
+        ? await chrome.windows.get(windowId)
+        : await chrome.windows.getCurrent();
 
-                resolve(isFullscreen || outerMatch); // Resolve with the result
-            });
-        });
-    });
+    const displays = await chrome.system.display.getInfo();
+    if (!displays || displays.length === 0) {
+        throw new Error("Error getting display info.");
+    }
+
+    const { bounds } = findDisplayForWindow(displays, win);
+
+    const isFullscreen = win.state === "fullscreen";
+    const outerMatch = win.width === bounds.width && win.height === bounds.height;
+
+    return isFullscreen || outerMatch;
 }
 
 function injectKioskExitButton(tabId) {
@@ -38,37 +45,55 @@ function injectKioskExitButton(tabId) {
     ]);
 }
 
-function injectCloseButton() {
-    chrome.windows.getCurrent().then(win => {
-        return chrome.tabs.query({ active: true, currentWindow: true });
-    }).then(tabs => {
-        if (tabs[0] && tabs[0].url && tabs[0].url.startsWith("http")) {
-            console.log("Checking Kiosk mode");
-            isKioskMode()
-                .then((isKioskModeOpen) => {
-                    if (isKioskModeOpen) {
-                        console.log(`Injecting into: ${tabs[0].url}`);
-                        return injectKioskExitButton(tabs[0].id);
-                    } else {
-                        console.log("Not in Kiosk mode, won't inject the Kiosk Close Button.")
-                    }
-                })
-                .catch((error) => {
-                    console.error(`Error while checking Kiosk mode: ${error}`);
-                });
-        } else {
-            console.warn(`Skipping script injection for restricted URL: ${tabs[0]?.url}`);
+// Tabs that already carry the button. Without this, every tab switch would insert
+// another copy of the stylesheet. Cleared when a tab navigates away or closes.
+const injectedTabs = new Set();
+
+// Injects into the given tab, as long as its own window is in kiosk mode.
+async function injectCloseButton(tab) {
+    try {
+        if (!tab || !tab.url || !tab.url.startsWith("http")) {
+            console.warn(`Skipping script injection for restricted URL: ${tab?.url}`);
+            return;
         }
-    }).catch(error => {
+
+        if (injectedTabs.has(tab.id)) return;
+
+        console.log("Checking Kiosk mode");
+        if (!await isKioskMode(tab.windowId)) {
+            console.log("Not in Kiosk mode, won't inject the Kiosk Close Button.");
+            return;
+        }
+
+        console.log(`Injecting into: ${tab.url}`);
+        await injectKioskExitButton(tab.id);
+        injectedTabs.add(tab.id);
+    } catch (error) {
         console.error(`Error in kiosk mode Kiosk Close Button injection: ${error}`);
-    });
+    }
 }
 
-function closeKioskWindow(sendResponse) {
-    chrome.windows.getCurrent().then(win => {
+// Used on startup/install, where no particular tab triggered the injection.
+async function injectIntoActiveTab() {
+    try {
+        const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+        await injectCloseButton(tab);
+    } catch (error) {
+        console.error(`Error finding the active tab: ${error}`);
+    }
+}
+
+function closeKioskWindow(sender, sendResponse) {
+    // Close the window the click came from, not whichever one happens to be focused.
+    const senderWindowId = sender?.tab?.windowId;
+    const targetWindowId = typeof senderWindowId === "number"
+        ? Promise.resolve(senderWindowId)
+        : chrome.windows.getCurrent().then(win => win.id);
+
+    targetWindowId.then(windowId => {
         sendResponse({ success: true });
         return new Promise(resolve => setTimeout(resolve, 50)).then(() => {
-            return chrome.windows.remove(win.id);
+            return chrome.windows.remove(windowId);
         });
     }).catch(error => {
         console.error(`Error closing kiosk window: ${error}`);
@@ -77,22 +102,36 @@ function closeKioskWindow(sendResponse) {
 }
 
 chrome.runtime.onStartup.addListener(() => {
-    injectCloseButton();
+    injectIntoActiveTab();
 });
 
 chrome.runtime.onInstalled.addListener(() => {
-    injectCloseButton();
+    injectIntoActiveTab();
 });
 
-chrome.tabs.onUpdated.addListener((tabId, changeInfo) => {
-    if (changeInfo.status === "complete") {
-        injectCloseButton();
+chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
+    if (changeInfo.status === "loading") {
+        // Navigating away tears down the content script, so it needs injecting again
+        injectedTabs.delete(tabId);
+    } else if (changeInfo.status === "complete") {
+        injectCloseButton(tab);
     }
 });
 
-chrome.runtime.onMessage.addListener((message, _, sendResponse) => {
+chrome.tabs.onRemoved.addListener((tabId) => {
+    injectedTabs.delete(tabId);
+});
+
+// A tab that finished loading in the background still needs the button once it is shown.
+chrome.tabs.onActivated.addListener(({ tabId }) => {
+    chrome.tabs.get(tabId)
+        .then(injectCloseButton)
+        .catch(error => console.error(`Error getting the activated tab: ${error}`));
+});
+
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     if (message.action === "CLOSE_KIOSK_WINDOW") {
-        closeKioskWindow(sendResponse);
+        return closeKioskWindow(sender, sendResponse); // keep channel open for async response
     } else if (message.action === "IS_KIOSK_MODE") {
         isKioskMode()
             .then(result => sendResponse({ isKiosk: result }))
