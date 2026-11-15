@@ -1,7 +1,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![Chrome Web Store Users](https://img.shields.io/chrome-web-store/users/daliphodbodnmaljedemmkdlafkoopal)
+[![Tests](https://github.com/DragosPancescu/chrome-kiosk-exit/actions/workflows/tests.yml/badge.svg)](https://github.com/DragosPancescu/chrome-kiosk-exit/actions/workflows/tests.yml)
 
-<h1>Chrome Kiosk Exit Button Extension <img align="center" width="64" src="images/icon128.png"></h1>
+<h1>Chrome Kiosk Exit Button Extension <img align="center" width="64" src="src/images/icon128.png"></h1>
 
 > A simple Chrome extension that adds a customizable exit button to kiosk mode windows.
 
@@ -16,7 +17,7 @@ Download from: [Chrome Web Store](https://chromewebstore.google.com/detail/kiosk
 - **Image** - Upload a custom image (up to 5 MB)
 - **Position** - Place the button in any corner of the screen
 - **Size** - Small, Medium, or Large
-- **Auto-hide** - Button fades out after a set period of inactivity and reappears on mouse movement
+- **Auto-hide** - Button fades out after a set period of inactivity and reappears on mouse movement, touch or a tap on its corner
 - **Live updates** - Saved changes apply to already-open pages, no reload needed
 
 ## Permissions

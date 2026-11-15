@@ -11,15 +11,8 @@ const buttonPreview = document.getElementById('buttonPreview');
 const buttonAutoHideDelay = document.getElementById('autoHideDelay');
 const saveButton = document.getElementById('save');
 
-const DEFAULTS = {
-    buttonType: 'image',
-    buttonText: 'X',
-    buttonColor: '#1A7B72',
-    buttonImage: 'default',
-    buttonPosition: 'top-right',
-    buttonSize: 'small',
-    buttonAutoHideDelay: 0
-};
+// Shared with the content script, see defaults.js
+const DEFAULTS = globalThis.KIOSK_EXIT_DEFAULTS;
 
 // Largest edge an uploaded image is stored at. The button never renders bigger than
 // min(5vw, 5vh), so anything beyond this is quota spent for no visible gain.
@@ -30,6 +23,18 @@ let toastInstance;
 
 // Staged image; written to storage only when Save is pressed
 let currentImageData = DEFAULTS.buttonImage;
+
+// Bumped by every upload and reset, so an image that finishes decoding late
+// can't overwrite a newer choice
+let imageRequestId = 0;
+
+// Save stays disabled while the delay is invalid or an upload is still decoding
+let autoHideDelayValid = true;
+let imageDecoding = false;
+
+function updateSaveEnabled() {
+    saveButton.disabled = !autoHideDelayValid || imageDecoding;
+}
 
 document.addEventListener('DOMContentLoaded', () => {
     const toastEl = document.getElementById('status');
@@ -99,16 +104,20 @@ function showToast(title, message, isError = false) {
     }
 }
 
-function validateAutoHideDelay() {
+function validateAutoHideDelay(event) {
     const raw = buttonAutoHideDelay.value.trim();
     const value = Number(raw);
-    const isValid = raw !== '' && Number.isInteger(value) && value >= 0 && value <= 300;
+    autoHideDelayValid = raw !== '' && Number.isInteger(value) && value >= 0 && value <= 300;
 
-    buttonAutoHideDelay.setCustomValidity(isValid ? '' : 'Enter a whole number of seconds between 0 and 300');
-    saveButton.disabled = !isValid;
+    buttonAutoHideDelay.setCustomValidity(autoHideDelayValid ? '' : 'Enter a whole number of seconds between 0 and 300');
+    buttonAutoHideDelay.classList.toggle('is-invalid', !autoHideDelayValid);
+    updateSaveEnabled();
 
-    // Triggering browser's built-in validation to show error message
-    buttonAutoHideDelay.reportValidity();
+    // Show the browser's message while typing only. reportValidity() focuses the field,
+    // so calling it on blur would pull focus straight back and trap the user in it.
+    if (event?.type === 'input') {
+        buttonAutoHideDelay.reportValidity();
+    }
 }
 
 // Load saved settings
@@ -212,20 +221,40 @@ async function handleImageUpload() {
         return;
     }
 
+    const requestId = ++imageRequestId;
+    imageDecoding = true;
+    updateSaveEnabled();
+
     try {
         const dataUrl = await readFileAsDataURL(file);
+        const imageData = await downscaleImage(dataUrl);
+
+        // A newer upload or a reset happened while this one was decoding
+        if (requestId !== imageRequestId) return;
 
         // Stage the image for the preview; Save is what persists it
-        currentImageData = await downscaleImage(dataUrl);
+        currentImageData = imageData;
         updatePreview();
     } catch (error) {
+        if (requestId !== imageRequestId) return;
+
         imageUpload.value = "";
         showToast('Error', `Image not loaded: ${error.message}.`, true);
+    } finally {
+        if (requestId === imageRequestId) {
+            imageDecoding = false;
+            updateSaveEnabled();
+        }
     }
 }
 
 // Reset to default image
 function resetToDefaultImage() {
+    // Drop any upload that is still decoding
+    imageRequestId++;
+    imageDecoding = false;
+    updateSaveEnabled();
+
     // Set to default
     currentImageData = DEFAULTS.buttonImage;
     imageUpload.value = '';

@@ -14,62 +14,38 @@ function findDisplayForWindow(displays, win) {
 
 // Checks whether a window looks like it is running in kiosk mode.
 // Pass a windowId to check a specific window, or omit it to check the focused one.
+// Chrome has no API for the --kiosk flag, so a fullscreen window is the best signal there is.
 async function isKioskMode(windowId) {
     const win = typeof windowId === "number"
         ? await chrome.windows.get(windowId)
         : await chrome.windows.getCurrent();
 
+    if (win.state === "fullscreen") return true;
+
+    // Fallback for platforms that don't report the state: the window covers its display
     const displays = await chrome.system.display.getInfo();
     if (!displays || displays.length === 0) {
         throw new Error("Error getting display info.");
     }
 
     const { bounds } = findDisplayForWindow(displays, win);
-
-    const isFullscreen = win.state === "fullscreen";
-    const outerMatch = win.width === bounds.width && win.height === bounds.height;
-
-    return isFullscreen || outerMatch;
+    return win.width === bounds.width && win.height === bounds.height;
 }
-
-function injectKioskExitButton(tabId) {
-    return Promise.all([
-        chrome.scripting.executeScript({
-            target: { tabId: tabId },
-            files: ['content.js']
-        }),
-        chrome.scripting.insertCSS({
-            target: { tabId: tabId },
-            files: ['styles/content.css']
-        })
-    ]);
-}
-
-// Tabs that already carry the button. Without this, every tab switch would insert
-// another copy of the stylesheet. Cleared when a tab navigates away or closes.
-const injectedTabs = new Set();
 
 // Injects into the given tab, as long as its own window is in kiosk mode.
+// Safe to call repeatedly: content.js keeps a single button per document and asks
+// for its stylesheet (INSERT_CSS) only the first time it runs there.
 async function injectCloseButton(tab) {
     try {
-        if (!tab || !tab.url || !tab.url.startsWith("http")) {
-            console.warn(`Skipping script injection for restricted URL: ${tab?.url}`);
-            return;
-        }
+        if (!tab?.url?.startsWith("http")) return;
+        if (!await isKioskMode(tab.windowId)) return;
 
-        if (injectedTabs.has(tab.id)) return;
-
-        console.log("Checking Kiosk mode");
-        if (!await isKioskMode(tab.windowId)) {
-            console.log("Not in Kiosk mode, won't inject the Kiosk Close Button.");
-            return;
-        }
-
-        console.log(`Injecting into: ${tab.url}`);
-        await injectKioskExitButton(tab.id);
-        injectedTabs.add(tab.id);
+        await chrome.scripting.executeScript({
+            target: { tabId: tab.id },
+            files: ["defaults.js", "content.js"]
+        });
     } catch (error) {
-        console.error(`Error in kiosk mode Kiosk Close Button injection: ${error}`);
+        console.error(`Error injecting the kiosk exit button: ${error}`);
     }
 }
 
@@ -83,22 +59,25 @@ async function injectIntoActiveTab() {
     }
 }
 
-function closeKioskWindow(sender, sendResponse) {
+async function closeKioskWindow(sender) {
     // Close the window the click came from, not whichever one happens to be focused.
     const senderWindowId = sender?.tab?.windowId;
-    const targetWindowId = typeof senderWindowId === "number"
-        ? Promise.resolve(senderWindowId)
-        : chrome.windows.getCurrent().then(win => win.id);
+    const windowId = typeof senderWindowId === "number"
+        ? senderWindowId
+        : (await chrome.windows.getCurrent()).id;
 
-    targetWindowId.then(windowId => {
-        sendResponse({ success: true });
-        return new Promise(resolve => setTimeout(resolve, 50)).then(() => {
-            return chrome.windows.remove(windowId);
-        });
-    }).catch(error => {
-        console.error(`Error closing kiosk window: ${error}`);
-    });
-    return true;
+    // A button left over from a fullscreen session must not close a normal window.
+    // If the check itself fails, close anyway: a kiosk with no way out is worse.
+    const stillKiosk = await isKioskMode(windowId).catch(() => true);
+    if (!stillKiosk) return { success: false };
+
+    // Give the response a moment to reach the page before the window goes away
+    setTimeout(() => {
+        chrome.windows.remove(windowId)
+            .catch(error => console.error(`Error closing kiosk window: ${error}`));
+    }, 50);
+
+    return { success: true };
 }
 
 chrome.runtime.onStartup.addListener(() => {
@@ -110,16 +89,9 @@ chrome.runtime.onInstalled.addListener(() => {
 });
 
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
-    if (changeInfo.status === "loading") {
-        // Navigating away tears down the content script, so it needs injecting again
-        injectedTabs.delete(tabId);
-    } else if (changeInfo.status === "complete") {
+    if (changeInfo.status === "complete") {
         injectCloseButton(tab);
     }
-});
-
-chrome.tabs.onRemoved.addListener((tabId) => {
-    injectedTabs.delete(tabId);
 });
 
 // A tab that finished loading in the background still needs the button once it is shown.
@@ -131,11 +103,26 @@ chrome.tabs.onActivated.addListener(({ tabId }) => {
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     if (message.action === "CLOSE_KIOSK_WINDOW") {
-        return closeKioskWindow(sender, sendResponse); // keep channel open for async response
-    } else if (message.action === "IS_KIOSK_MODE") {
-        isKioskMode()
-            .then(result => sendResponse({ isKiosk: result }))
-            .catch(() => sendResponse({ isKiosk: false }));
+        closeKioskWindow(sender)
+            .then(sendResponse)
+            .catch(error => {
+                console.error(`Error closing kiosk window: ${error}`);
+                sendResponse({ success: false });
+            });
         return true; // keep channel open for async response
+    } else if (message.action === "IS_KIOSK_MODE") {
+        // From a page: check that page's window. From the popup: the focused window.
+        isKioskMode(sender?.tab?.windowId)
+            .then(result => sendResponse({ isKiosk: result }))
+            .catch(() => sendResponse({ isKiosk: false, error: true }));
+        return true; // keep channel open for async response
+    } else if (message.action === "INSERT_CSS") {
+        // Sent by content.js once per document, so the stylesheet is never inserted twice
+        if (typeof sender?.tab?.id === "number") {
+            chrome.scripting.insertCSS({
+                target: { tabId: sender.tab.id },
+                files: ["styles/content.css"]
+            }).catch(error => console.error(`Error inserting the button stylesheet: ${error}`));
+        }
     }
 });

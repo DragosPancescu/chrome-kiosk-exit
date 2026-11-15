@@ -278,4 +278,19 @@ html[data-bs-theme="light"] .divider {
     z-index: 9999;
     bottom: 20px;
     left: 20px;
+    padding: 8px 16px;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    background-color: #FFDD00;
+    color: #000000;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* Inline SVG icons, sized and aligned like an icon font glyph */
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.125em;
+    flex: 0 0 auto;
 }

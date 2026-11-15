@@ -1,0 +1,11 @@
+{
+  "name": "chrome-kiosk-exit-tests",
+  "private": true,
+  "description": "End-to-end tests for the Kiosk Exit Button extension. Not part of the shipped extension.",
+  "scripts": {
+    "test": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.49.0"
+  }
+}

@@ -17,7 +17,7 @@ jobs:
       - name: Get version from manifest
         id: version
         run: |
-          VERSION=$(jq -r '.version' manifest.json)
+          VERSION=$(jq -r '.version' src/manifest.json)
           echo "version=$VERSION" >> "$GITHUB_OUTPUT"
 
       - name: Check if tag exists
@@ -32,18 +32,11 @@ jobs:
       - name: Build zip
         if: steps.check_tag.outputs.exists == 'false'
         run: |
-          zip -r chrome-kiosk-exit-v${{ steps.version.outputs.version }}.zip \
-            manifest.json \
-            background.js \
-            content.js \
-            popup.html \
-            popup.js \
-            options.html \
-            options.js \
-            images/ \
-            lib/ \
-            styles/ \
-            LICENSE
+          # The extension lives in src/; zip its contents so manifest.json sits at the
+          # root of the archive, which is what "Load unpacked" expects after extracting.
+          ZIP="$PWD/chrome-kiosk-exit-v${{ steps.version.outputs.version }}.zip"
+          (cd src && zip -r "$ZIP" .)
+          zip "$ZIP" LICENSE
 
       - name: Create release
         if: steps.check_tag.outputs.exists == 'false'
