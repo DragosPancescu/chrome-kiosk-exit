@@ -1,0 +1,30 @@
+Usa o Chrome no modo quiosque sem teclado, ou com usuários que não conhecem o Alt+F4? O Kiosk Exit Button adiciona um botão de fechar limpo e personalizável sobre qualquer site, para que qualquer pessoa encerre a sessão do quiosque com um único clique. Não é preciso alterar sua página.
+
+IDEAL PARA
+• Quiosques e terminais com touchscreen ou mouse, mas sem teclado
+• Sinalização digital e telas informativas
+• Estandes de feiras e demonstrações de produtos
+• Terminais de bibliotecas, museus e recepções
+• Computadores compartilhados cujos usuários não deveriam precisar conhecer atalhos
+
+RECURSOS
+• Botão de texto ou de imagem: use seu próprio rótulo ou envie uma imagem personalizada (até 5 MB)
+• Texto e cor personalizados para combinar com sua marca
+• Posicione em qualquer canto da tela
+• Tamanho pequeno, médio ou grande
+• Ocultar automaticamente: o botão some após um tempo de inatividade e volta com o movimento do mouse, um toque na tela ou um toque no seu canto
+• Atualização ao vivo: as alterações salvas valem para páginas já abertas, sem recarregar
+• Aparece apenas em janelas de quiosque ou de tela cheia, e se oculta quando a janela sai da tela cheia
+• Funciona offline: tudo vem incluído na extensão
+• As configurações são mantidas entre sessões
+
+PRIVACIDADE
+Nenhum dado de navegação é coletado ou transmitido. As configurações do botão são salvas localmente no dispositivo pela API de armazenamento do Chrome. A extensão não faz nenhuma requisição de rede, e nada sai da sua máquina.
+
+POR QUE ELA PRECISA DE ACESSO A TODOS OS SITES?
+O Chrome exige essa permissão para que a extensão possa exibir o botão sobre qualquer site que o seu quiosque esteja mostrando. Ela apenas adiciona o botão e o estilo dele; não lê nem registra o conteúdo das páginas.
+
+CÓDIGO ABERTO
+Código-fonte, relatos de bugs e pedidos de recursos: https://github.com/DragosPancescu/chrome-kiosk-exit
+
+Se ela te poupar uma dor de cabeça, uma avaliação ajuda muito!

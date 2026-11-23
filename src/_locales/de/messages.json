@@ -1,0 +1,164 @@
+{
+  "htmlLang": {
+    "message": "de"
+  },
+  "extName": {
+    "message": "Kiosk Exit Button: Chrome-Kioskmodus ohne Tastatur beenden"
+  },
+  "extDescription": {
+    "message": "Fügt dem Chrome-Kioskmodus eine Schließen-Schaltfläche hinzu. Beenden per Klick, ohne Tastenkürzel. Anpassbar, blendet sich aus."
+  },
+  "popupLoading": {
+    "message": "Wird geladen..."
+  },
+  "popupChecking": {
+    "message": "Wird geprüft..."
+  },
+  "popupActive": {
+    "message": "Aktiv: Kioskmodus erkannt"
+  },
+  "popupInactive": {
+    "message": "Inaktiv: Kein Kioskmodus"
+  },
+  "openSettings": {
+    "message": "Einstellungen öffnen"
+  },
+  "optionsPageTitle": {
+    "message": "Kiosk Exit Button – Optionen"
+  },
+  "optionsHeading": {
+    "message": "Kiosk Exit Button – Konfiguration"
+  },
+  "buyMeCoffee": {
+    "message": "Spendier mir einen Kaffee"
+  },
+  "toastClose": {
+    "message": "Schließen"
+  },
+  "buttonSettings": {
+    "message": "Schaltflächen-Einstellungen"
+  },
+  "buttonType": {
+    "message": "Schaltflächentyp"
+  },
+  "typeText": {
+    "message": "Text"
+  },
+  "typeImage": {
+    "message": "Bild"
+  },
+  "textAndColor": {
+    "message": "Text und Farbe"
+  },
+  "chooseTextColor": {
+    "message": "Textfarbe wählen"
+  },
+  "buttonImage": {
+    "message": "Schaltflächenbild"
+  },
+  "resetDefault": {
+    "message": "Auf Standard zurücksetzen"
+  },
+  "maxFileSize": {
+    "message": "Maximale Dateigröße: 5 MB."
+  },
+  "buttonPosition": {
+    "message": "Position"
+  },
+  "posTopRight": {
+    "message": "Oben rechts"
+  },
+  "posTopLeft": {
+    "message": "Oben links"
+  },
+  "posBottomRight": {
+    "message": "Unten rechts"
+  },
+  "posBottomLeft": {
+    "message": "Unten links"
+  },
+  "buttonSize": {
+    "message": "Größe"
+  },
+  "sizeSmall": {
+    "message": "Klein"
+  },
+  "sizeMedium": {
+    "message": "Mittel"
+  },
+  "sizeLarge": {
+    "message": "Groß"
+  },
+  "autoHideLabel": {
+    "message": "Automatisch ausblenden nach (Sekunden)"
+  },
+  "autoHideHelp": {
+    "message": "Die Schaltfläche wird nach so vielen Sekunden ohne Mausbewegung ausgeblendet. 0 bedeutet: immer sichtbar."
+  },
+  "saveSettings": {
+    "message": "Einstellungen speichern"
+  },
+  "livePreview": {
+    "message": "Live-Vorschau"
+  },
+  "previewInfo": {
+    "message": "Diese Vorschau zeigt, wie Ihre Exit-Schaltfläche auf Websites aussieht. Passen Sie links die Einstellungen an, um das Aussehen zu ändern."
+  },
+  "tipsHeading": {
+    "message": "Tipps:"
+  },
+  "tip1": {
+    "message": "Die Schaltfläche bleibt immer in der gewählten Bildschirmecke"
+  },
+  "tip2": {
+    "message": "Text-Schaltflächen funktionieren am besten mit kurzem Text (1–3 Zeichen)"
+  },
+  "tip3": {
+    "message": "Verwenden Sie für Bild-Schaltflächen am besten ein transparentes, quadratisches PNG"
+  },
+  "toastSuccessTitle": {
+    "message": "Erledigt!"
+  },
+  "toastSavedMessage": {
+    "message": "Ihre Einstellungen wurden gespeichert."
+  },
+  "toastHeadsUp": {
+    "message": "Hinweis"
+  },
+  "toastLoadFailed": {
+    "message": "Gespeicherte Einstellungen konnten nicht geladen werden, Standardwerte werden angezeigt."
+  },
+  "toastErrorTitle": {
+    "message": "Fehler"
+  },
+  "toastImageNotLoaded": {
+    "message": "Bild nicht geladen: $REASON$.",
+    "placeholders": {
+      "reason": {
+        "content": "$1",
+        "example": "the file is not a readable image"
+      }
+    }
+  },
+  "errFileUnreadable": {
+    "message": "Die Datei konnte nicht gelesen werden"
+  },
+  "errNotImage": {
+    "message": "Die Datei ist kein lesbares Bild"
+  },
+  "toastSaveFailed": {
+    "message": "Einstellungen wurden nicht gespeichert: $DETAIL$",
+    "placeholders": {
+      "detail": {
+        "content": "$1",
+        "example": "QUOTA_BYTES quota exceeded"
+      }
+    }
+  },
+  "autoHideInvalid": {
+    "message": "Geben Sie eine ganze Zahl zwischen 0 und 300 Sekunden ein"
+  },
+  "imageTooLarge": {
+    "message": "Bild zu groß. Bitte verwenden Sie ein Bild unter 5 MB."
+  }
+}

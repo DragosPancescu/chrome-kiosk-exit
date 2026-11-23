@@ -1,0 +1,164 @@
+{
+  "htmlLang": {
+    "message": "pl"
+  },
+  "extName": {
+    "message": "Kiosk Exit Button: zamknij tryb kiosku Chrome bez klawiatury"
+  },
+  "extDescription": {
+    "message": "Dodaje przycisk zamykania na ekranie w trybie kiosku Chrome. Wyjście jednym kliknięciem, bez skrótów klawiszowych. Autoukrywanie."
+  },
+  "popupLoading": {
+    "message": "Ładowanie..."
+  },
+  "popupChecking": {
+    "message": "Sprawdzanie..."
+  },
+  "popupActive": {
+    "message": "Aktywny: wykryto tryb kiosku"
+  },
+  "popupInactive": {
+    "message": "Nieaktywny: brak trybu kiosku"
+  },
+  "openSettings": {
+    "message": "Otwórz ustawienia"
+  },
+  "optionsPageTitle": {
+    "message": "Kiosk Exit Button – opcje"
+  },
+  "optionsHeading": {
+    "message": "Konfiguracja Kiosk Exit Button"
+  },
+  "buyMeCoffee": {
+    "message": "Postaw mi kawę"
+  },
+  "toastClose": {
+    "message": "Zamknij"
+  },
+  "buttonSettings": {
+    "message": "Ustawienia przycisku"
+  },
+  "buttonType": {
+    "message": "Typ przycisku"
+  },
+  "typeText": {
+    "message": "Tekst"
+  },
+  "typeImage": {
+    "message": "Obraz"
+  },
+  "textAndColor": {
+    "message": "Tekst i kolor przycisku"
+  },
+  "chooseTextColor": {
+    "message": "Wybierz kolor tekstu"
+  },
+  "buttonImage": {
+    "message": "Obraz przycisku"
+  },
+  "resetDefault": {
+    "message": "Przywróć domyślny"
+  },
+  "maxFileSize": {
+    "message": "Maksymalny rozmiar pliku: 5 MB."
+  },
+  "buttonPosition": {
+    "message": "Położenie przycisku"
+  },
+  "posTopRight": {
+    "message": "Prawy górny róg"
+  },
+  "posTopLeft": {
+    "message": "Lewy górny róg"
+  },
+  "posBottomRight": {
+    "message": "Prawy dolny róg"
+  },
+  "posBottomLeft": {
+    "message": "Lewy dolny róg"
+  },
+  "buttonSize": {
+    "message": "Rozmiar przycisku"
+  },
+  "sizeSmall": {
+    "message": "Mały"
+  },
+  "sizeMedium": {
+    "message": "Średni"
+  },
+  "sizeLarge": {
+    "message": "Duży"
+  },
+  "autoHideLabel": {
+    "message": "Automatyczne ukrywanie po (sekundy)"
+  },
+  "autoHideHelp": {
+    "message": "Przycisk zniknie po tylu sekundach bez ruchu myszy. Ustaw 0, aby był zawsze widoczny."
+  },
+  "saveSettings": {
+    "message": "Zapisz ustawienia"
+  },
+  "livePreview": {
+    "message": "Podgląd na żywo"
+  },
+  "previewInfo": {
+    "message": "Ten podgląd pokazuje, jak przycisk wyjścia będzie wyglądał na stronach. Dostosuj ustawienia po lewej, aby zmienić jego wygląd."
+  },
+  "tipsHeading": {
+    "message": "Wskazówki:"
+  },
+  "tip1": {
+    "message": "Przycisk zawsze pozostaje w wybranym rogu ekranu"
+  },
+  "tip2": {
+    "message": "Przyciski tekstowe najlepiej sprawdzają się z krótkim tekstem (1–3 znaki)"
+  },
+  "tip3": {
+    "message": "Przy przyciskach z obrazem najlepiej użyć przezroczystego, kwadratowego pliku PNG"
+  },
+  "toastSuccessTitle": {
+    "message": "Gotowe!"
+  },
+  "toastSavedMessage": {
+    "message": "Ustawienia zostały zapisane."
+  },
+  "toastHeadsUp": {
+    "message": "Uwaga"
+  },
+  "toastLoadFailed": {
+    "message": "Nie udało się wczytać zapisanych ustawień, wyświetlane są wartości domyślne."
+  },
+  "toastErrorTitle": {
+    "message": "Błąd"
+  },
+  "toastImageNotLoaded": {
+    "message": "Nie wczytano obrazu: $REASON$.",
+    "placeholders": {
+      "reason": {
+        "content": "$1",
+        "example": "the file is not a readable image"
+      }
+    }
+  },
+  "errFileUnreadable": {
+    "message": "nie udało się odczytać pliku"
+  },
+  "errNotImage": {
+    "message": "plik nie jest czytelnym obrazem"
+  },
+  "toastSaveFailed": {
+    "message": "Nie zapisano ustawień: $DETAIL$",
+    "placeholders": {
+      "detail": {
+        "content": "$1",
+        "example": "QUOTA_BYTES quota exceeded"
+      }
+    }
+  },
+  "autoHideInvalid": {
+    "message": "Wpisz liczbę całkowitą sekund od 0 do 300"
+  },
+  "imageTooLarge": {
+    "message": "Obraz jest za duży. Użyj obrazu mniejszego niż 5 MB."
+  }
+}

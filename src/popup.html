@@ -23,9 +23,9 @@
         <div class="card-body py-2 px-3">
             <div id="status" class="d-flex align-items-center gap-2">
                 <div class="spinner-border spinner-border-sm text-secondary" role="status">
-                    <span class="visually-hidden">Loading...</span>
+                    <span class="visually-hidden" data-i18n="popupLoading">Loading...</span>
                 </div>
-                <span>Checking...</span>
+                <span data-i18n="popupChecking">Checking...</span>
             </div>
         </div>
     </div>
@@ -34,11 +34,12 @@
 
     <!-- Action Section -->
     <div class="action-container">
-        <button type="button" id="options" class="btn btn-primary w-100" title="Open Settings">
-            <svg class="icon me-1" viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor"><circle cx="8" cy="8" r="5.5" stroke-width="3" stroke-dasharray="2.16 2.16"/><circle cx="8" cy="8" r="3.5" stroke-width="2.5"/></svg> Open Settings
+        <button type="button" id="options" class="btn btn-primary w-100" title="Open Settings" data-i18n-title="openSettings">
+            <svg class="icon me-1" viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor"><circle cx="8" cy="8" r="5.5" stroke-width="3" stroke-dasharray="2.16 2.16"/><circle cx="8" cy="8" r="3.5" stroke-width="2.5"/></svg> <span data-i18n="openSettings">Open Settings</span>
         </button>
     </div>
 
+    <script src="i18n.js"></script>
     <script src="popup.js"></script>
 </body>
 

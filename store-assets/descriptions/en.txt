@@ -1,0 +1,30 @@
+Running Chrome in kiosk mode without a keyboard, or with users who don't know Alt+F4? Kiosk Exit Button adds a clean, customizable close button on top of any website, so anyone can end the kiosk session with a single click. No changes to your web page needed.
+
+PERFECT FOR
+• Kiosks and terminals with a touchscreen or mouse but no keyboard
+• Digital signage and info displays
+• Trade show stands and product demos
+• Library, museum and lobby terminals
+• Shared PCs where users shouldn't need to know shortcuts
+
+FEATURES
+• Text or image button: use your own label or upload a custom image (up to 5 MB)
+• Custom text and color to match your branding
+• Place it in any corner of the screen
+• Small, Medium or Large size
+• Auto-hide: the button fades out after inactivity and reappears on mouse movement, touch or a tap on its corner
+• Live updates: saved changes apply to pages that are already open, no reload needed
+• Only appears in kiosk or fullscreen windows, and hides itself when the window leaves fullscreen
+• Works offline: everything is bundled with the extension
+• Settings persist across sessions
+
+PRIVACY
+No browsing data is collected or transmitted. Your button settings are stored locally on the device using Chrome's storage API. The extension makes no network requests, and nothing leaves your machine.
+
+WHY DOES IT NEED ACCESS TO ALL WEBSITES?
+Chrome requires this permission so the extension can display the button on top of whatever site your kiosk is showing. It only adds the button and its styling; it does not read or record page content.
+
+OPEN SOURCE
+Source code, bug reports and feature requests: https://github.com/DragosPancescu/chrome-kiosk-exit
+
+If it saves you a headache, a review is much appreciated!

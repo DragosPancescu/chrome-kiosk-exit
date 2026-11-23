@@ -1,0 +1,214 @@
+{
+  "htmlLang": {
+    "message": "en",
+    "description": "BCP 47 code of this translation, used for <html lang>. Not shown to users."
+  },
+  "extName": {
+    "message": "Kiosk Exit Button: Close Chrome Kiosk Mode Without a Keyboard",
+    "description": "Store and extension name. Max 75 characters. Keep 'Kiosk Exit Button' untranslated."
+  },
+  "extDescription": {
+    "message": "Add an on-screen close button to Chrome kiosk mode. Exit with one click, no keyboard shortcuts needed. Customizable, auto-hides.",
+    "description": "Store summary. Max 132 characters."
+  },
+  "popupLoading": {
+    "message": "Loading...",
+    "description": "Screen-reader text for the popup spinner."
+  },
+  "popupChecking": {
+    "message": "Checking...",
+    "description": "Popup status while checking for kiosk mode."
+  },
+  "popupActive": {
+    "message": "Active: Kiosk mode detected",
+    "description": "Popup status when Chrome is in kiosk mode."
+  },
+  "popupInactive": {
+    "message": "Inactive: Not in kiosk mode",
+    "description": "Popup status when Chrome is not in kiosk mode."
+  },
+  "openSettings": {
+    "message": "Open Settings",
+    "description": "Popup button that opens the options page."
+  },
+  "optionsPageTitle": {
+    "message": "Kiosk Exit Button Options",
+    "description": "Browser tab title of the options page."
+  },
+  "optionsHeading": {
+    "message": "Kiosk Exit Button Configuration",
+    "description": "Main heading of the options page."
+  },
+  "buyMeCoffee": {
+    "message": "Buy me a coffee",
+    "description": "Donation link."
+  },
+  "toastClose": {
+    "message": "Close",
+    "description": "Accessible label for the toast close button."
+  },
+  "buttonSettings": {
+    "message": "Button Settings",
+    "description": "Card heading."
+  },
+  "buttonType": {
+    "message": "Button Type",
+    "description": "Label for the Text/Image choice."
+  },
+  "typeText": {
+    "message": "Text",
+    "description": "Button type option."
+  },
+  "typeImage": {
+    "message": "Image",
+    "description": "Button type option."
+  },
+  "textAndColor": {
+    "message": "Button Text & Color",
+    "description": "Label for the text and color inputs."
+  },
+  "chooseTextColor": {
+    "message": "Choose text color",
+    "description": "Tooltip of the color picker."
+  },
+  "buttonImage": {
+    "message": "Button Image",
+    "description": "Label for the image upload."
+  },
+  "resetDefault": {
+    "message": "Reset to Default",
+    "description": "Resets the image to the bundled default."
+  },
+  "maxFileSize": {
+    "message": "Maximum file size: 5 MB.",
+    "description": "Hint under the image upload."
+  },
+  "buttonPosition": {
+    "message": "Button Position",
+    "description": "Label for the position select."
+  },
+  "posTopRight": {
+    "message": "Top Right",
+    "description": "Screen corner."
+  },
+  "posTopLeft": {
+    "message": "Top Left",
+    "description": "Screen corner."
+  },
+  "posBottomRight": {
+    "message": "Bottom Right",
+    "description": "Screen corner."
+  },
+  "posBottomLeft": {
+    "message": "Bottom Left",
+    "description": "Screen corner."
+  },
+  "buttonSize": {
+    "message": "Button Size",
+    "description": "Label for the size select."
+  },
+  "sizeSmall": {
+    "message": "Small",
+    "description": "Button size."
+  },
+  "sizeMedium": {
+    "message": "Medium",
+    "description": "Button size."
+  },
+  "sizeLarge": {
+    "message": "Large",
+    "description": "Button size."
+  },
+  "autoHideLabel": {
+    "message": "Auto-hide Timer (seconds)",
+    "description": "Label for the auto-hide delay input."
+  },
+  "autoHideHelp": {
+    "message": "Button will hide after this many seconds of mouse inactivity. Set to 0 to keep always visible.",
+    "description": "Hint under the auto-hide input."
+  },
+  "saveSettings": {
+    "message": "Save Settings",
+    "description": "Save button."
+  },
+  "livePreview": {
+    "message": "Live Preview",
+    "description": "Card heading."
+  },
+  "previewInfo": {
+    "message": "This preview shows how your exit button will appear on websites. You can adjust the settings on the left to customize its appearance.",
+    "description": "Info box under the preview."
+  },
+  "tipsHeading": {
+    "message": "Tips:",
+    "description": "Heading above the tips list."
+  },
+  "tip1": {
+    "message": "The button will always stay in the selected corner of the screen",
+    "description": "Tip."
+  },
+  "tip2": {
+    "message": "Text buttons work best with short text (1-3 characters)",
+    "description": "Tip."
+  },
+  "tip3": {
+    "message": "For image buttons, use a transparent, square PNG for best results",
+    "description": "Tip."
+  },
+  "toastSuccessTitle": {
+    "message": "Success!",
+    "description": "Toast title after saving."
+  },
+  "toastSavedMessage": {
+    "message": "Your settings have been saved.",
+    "description": "Toast message after saving."
+  },
+  "toastHeadsUp": {
+    "message": "Heads up",
+    "description": "Toast title for a non-fatal problem."
+  },
+  "toastLoadFailed": {
+    "message": "Saved settings could not be loaded, showing defaults.",
+    "description": "Shown when stored settings cannot be read."
+  },
+  "toastErrorTitle": {
+    "message": "Error",
+    "description": "Toast title for errors."
+  },
+  "toastImageNotLoaded": {
+    "message": "Image not loaded: $REASON$.",
+    "description": "Upload failed. $REASON$ is errFileUnreadable or errNotImage.",
+    "placeholders": {
+      "reason": {
+        "content": "$1",
+        "example": "the file is not a readable image"
+      }
+    }
+  },
+  "errFileUnreadable": {
+    "message": "the file could not be read",
+    "description": "Reason inserted into toastImageNotLoaded."
+  },
+  "errNotImage": {
+    "message": "the file is not a readable image",
+    "description": "Reason inserted into toastImageNotLoaded."
+  },
+  "toastSaveFailed": {
+    "message": "Settings were not saved: $DETAIL$",
+    "description": "Save failed. $DETAIL$ is Chrome's (English) error text.",
+    "placeholders": {
+      "detail": {
+        "content": "$1",
+        "example": "QUOTA_BYTES quota exceeded"
+      }
+    }
+  },
+  "autoHideInvalid": {
+    "message": "Enter a whole number of seconds between 0 and 300",
+    "description": "Validation message for the auto-hide input."
+  },
+  "imageTooLarge": {
+    "message": "Image too large. Please use an image under 5 MB.",
+    "description": "Alert when the uploaded file is over 5 MB."
+  }
+}

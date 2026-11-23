@@ -1,0 +1,30 @@
+Usi Chrome in modalità kiosk senza tastiera, o con utenti che non conoscono Alt+F4? Kiosk Exit Button aggiunge un pulsante di chiusura pulito e personalizzabile sopra qualsiasi sito web, così chiunque può terminare la sessione kiosk con un solo clic. Nessuna modifica alla tua pagina web.
+
+PERFETTO PER
+• Chioschi e terminali con touchscreen o mouse, ma senza tastiera
+• Digital signage e schermi informativi
+• Stand fieristici e demo di prodotto
+• Postazioni in biblioteche, musei e reception
+• PC condivisi i cui utenti non dovrebbero conoscere le scorciatoie
+
+FUNZIONALITÀ
+• Pulsante di testo o immagine: usa la tua etichetta o carica un'immagine personalizzata (fino a 5 MB)
+• Testo e colore personalizzati, in linea con il tuo brand
+• Posizionalo in qualsiasi angolo dello schermo
+• Dimensione piccola, media o grande
+• Nascondi automaticamente: il pulsante scompare dopo un periodo di inattività e ricompare al movimento del mouse, al tocco o con un tocco sul suo angolo
+• Aggiornamenti dal vivo: le modifiche salvate si applicano alle pagine già aperte, senza ricaricarle
+• Appare solo nelle finestre kiosk o a schermo intero, e si nasconde quando la finestra esce dallo schermo intero
+• Funziona offline: tutto è incluso nell'estensione
+• Le impostazioni restano salvate tra una sessione e l'altra
+
+PRIVACY
+Nessun dato di navigazione viene raccolto o trasmesso. Le impostazioni del pulsante vengono salvate in locale sul dispositivo tramite l'API di archiviazione di Chrome. L'estensione non effettua richieste di rete e nulla lascia il tuo computer.
+
+PERCHÉ SERVE L'ACCESSO A TUTTI I SITI WEB?
+Chrome richiede questa autorizzazione perché l'estensione possa mostrare il pulsante sopra qualsiasi sito visualizzato dal tuo chiosco. Aggiunge solo il pulsante e il suo stile; non legge né registra il contenuto delle pagine.
+
+OPEN SOURCE
+Codice sorgente, segnalazione di bug e richieste di funzionalità: https://github.com/DragosPancescu/chrome-kiosk-exit
+
+Se ti risparmia un mal di testa, una recensione è molto apprezzata!

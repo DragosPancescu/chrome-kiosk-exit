@@ -41,6 +41,8 @@ const test = base.extend({
             args: [
                 `--disable-extensions-except=${EXTENSION_PATH}`,
                 `--load-extension=${EXTENSION_PATH}`,
+                // Tests assert English strings; don't follow the machine's UI language
+                "--lang=en-US",
                 ...launchArgs
             ]
         });

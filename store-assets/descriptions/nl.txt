@@ -1,0 +1,30 @@
+Draai je Chrome in kioskmodus zonder toetsenbord, of met gebruikers die Alt+F4 niet kennen? Kiosk Exit Button plaatst een strakke, aanpasbare sluitknop boven op elke website, zodat iedereen de kiosksessie met één klik kan beëindigen. Je webpagina hoeft niet aangepast te worden.
+
+PERFECT VOOR
+• Kiosken en terminals met een touchscreen of muis, maar zonder toetsenbord
+• Digital signage en informatieschermen
+• Beursstands en productdemo's
+• Terminals in bibliotheken, musea en lobby's
+• Gedeelde pc's waarvan de gebruikers geen sneltoetsen hoeven te kennen
+
+FUNCTIES
+• Tekst- of afbeeldingsknop: gebruik je eigen label of upload een eigen afbeelding (tot 5 MB)
+• Eigen tekst en kleur, passend bij je huisstijl
+• Plaats de knop in elke hoek van het scherm
+• Klein, middel of groot formaat
+• Automatisch verbergen: de knop verdwijnt na een periode van inactiviteit en komt terug bij muisbeweging, aanraking of een tik op zijn hoek
+• Live updates: opgeslagen wijzigingen gelden voor pagina's die al open zijn, zonder herladen
+• Verschijnt alleen in kiosk- of volledig-schermvensters en verbergt zich wanneer het venster het volledige scherm verlaat
+• Werkt offline: alles zit in de extensie zelf
+• Instellingen blijven bewaard tussen sessies
+
+PRIVACY
+Er worden geen browsegegevens verzameld of verstuurd. Je knopinstellingen worden lokaal op het apparaat opgeslagen via de opslag-API van Chrome. De extensie doet geen netwerkverzoeken en er verlaat niets je computer.
+
+WAAROM HEEFT DE EXTENSIE TOEGANG TOT ALLE WEBSITES NODIG?
+Chrome vereist deze toestemming zodat de extensie de knop kan tonen boven op elke site die je kiosk weergeeft. De extensie voegt alleen de knop en de opmaak ervan toe; ze leest of registreert geen pagina-inhoud.
+
+OPEN SOURCE
+Broncode, bugmeldingen en functieverzoeken: https://github.com/DragosPancescu/chrome-kiosk-exit
+
+Bespaart het je wat hoofdpijn? Een review wordt erg gewaardeerd!

@@ -1,0 +1,30 @@
+Używasz Chrome w trybie kiosku bez klawiatury albo z użytkownikami, którzy nie znają Alt+F4? Kiosk Exit Button dodaje schludny, konfigurowalny przycisk zamykania nad dowolną stroną, dzięki czemu każdy może zakończyć sesję kiosku jednym kliknięciem. Twoja strona nie wymaga żadnych zmian.
+
+IDEALNY DO
+• Kiosków i terminali z ekranem dotykowym lub myszą, ale bez klawiatury
+• Digital signage i ekranów informacyjnych
+• Stoisk targowych i pokazów produktów
+• Terminali w bibliotekach, muzeach i recepcjach
+• Wspólnych komputerów, których użytkownicy nie powinni musieć znać skrótów
+
+FUNKCJE
+• Przycisk tekstowy lub z obrazem: własny napis albo własny obraz (do 5 MB)
+• Własny tekst i kolor, dopasowane do Twojej marki
+• Umieszczenie w dowolnym rogu ekranu
+• Rozmiar mały, średni lub duży
+• Automatyczne ukrywanie: przycisk znika po okresie bezczynności i wraca po ruchu myszy, dotknięciu ekranu lub dotknięciu jego rogu
+• Zmiany na żywo: zapisane ustawienia działają na już otwartych stronach, bez przeładowania
+• Pojawia się tylko w oknach kiosku lub pełnoekranowych i chowa się, gdy okno wychodzi z trybu pełnoekranowego
+• Działa offline: wszystko jest zawarte w rozszerzeniu
+• Ustawienia są zachowywane między sesjami
+
+PRYWATNOŚĆ
+Żadne dane przeglądania nie są zbierane ani przesyłane. Ustawienia przycisku są zapisywane lokalnie na urządzeniu za pomocą interfejsu API pamięci Chrome. Rozszerzenie nie wykonuje żadnych żądań sieciowych i nic nie opuszcza Twojego komputera.
+
+DLACZEGO POTRZEBUJE DOSTĘPU DO WSZYSTKICH STRON?
+Chrome wymaga tego uprawnienia, aby rozszerzenie mogło wyświetlać przycisk nad dowolną stroną pokazywaną przez kiosk. Dodaje ono tylko przycisk i jego styl; nie odczytuje ani nie zapisuje treści stron.
+
+OPEN SOURCE
+Kod źródłowy, zgłaszanie błędów i propozycje funkcji: https://github.com/DragosPancescu/chrome-kiosk-exit
+
+Jeśli oszczędzi Ci to bólu głowy, recenzja będzie bardzo mile widziana!

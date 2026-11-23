@@ -1,0 +1,30 @@
+Vous utilisez Chrome en mode kiosque sans clavier, ou avec des utilisateurs qui ne connaissent pas Alt+F4 ? Kiosk Exit Button ajoute un bouton de fermeture sobre et personnalisable par-dessus n'importe quel site, pour que chacun puisse mettre fin à la session kiosque d'un simple clic. Aucune modification de votre page web n'est nécessaire.
+
+IDÉAL POUR
+• Les bornes et terminaux avec écran tactile ou souris, mais sans clavier
+• L'affichage dynamique et les écrans d'information
+• Les stands de salons et les démonstrations de produits
+• Les postes de bibliothèques, de musées et d'accueil
+• Les PC partagés dont les utilisateurs ne devraient pas avoir à connaître les raccourcis
+
+FONCTIONNALITÉS
+• Bouton texte ou image : utilisez votre propre libellé ou importez une image personnalisée (jusqu'à 5 Mo)
+• Texte et couleur personnalisés, assortis à votre identité visuelle
+• Placement dans n'importe quel coin de l'écran
+• Taille petite, moyenne ou grande
+• Masquage automatique : le bouton disparaît après une période d'inactivité et réapparaît au mouvement de la souris, au toucher ou d'une pression sur son coin
+• Mise à jour en direct : les modifications enregistrées s'appliquent aux pages déjà ouvertes, sans rechargement
+• N'apparaît que dans les fenêtres en mode kiosque ou plein écran, et se masque lorsque la fenêtre quitte le plein écran
+• Fonctionne hors ligne : tout est inclus dans l'extension
+• Les paramètres sont conservés d'une session à l'autre
+
+CONFIDENTIALITÉ
+Aucune donnée de navigation n'est collectée ni transmise. Les paramètres du bouton sont enregistrés localement sur l'appareil via l'API de stockage de Chrome. L'extension n'effectue aucune requête réseau et rien ne quitte votre machine.
+
+POURQUOI L'ACCÈS À TOUS LES SITES EST-IL NÉCESSAIRE ?
+Chrome exige cette autorisation pour que l'extension puisse afficher le bouton par-dessus le site affiché par votre borne. Elle ajoute uniquement le bouton et son style ; elle ne lit ni n'enregistre le contenu des pages.
+
+OPEN SOURCE
+Code source, signalement de bugs et demandes de fonctionnalités : https://github.com/DragosPancescu/chrome-kiosk-exit
+
+Si l'extension vous évite des maux de tête, un avis est très apprécié !

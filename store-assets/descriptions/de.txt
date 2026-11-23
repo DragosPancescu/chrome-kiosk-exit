@@ -1,0 +1,30 @@
+Sie betreiben Chrome im Kioskmodus ohne Tastatur oder mit Nutzern, die Alt+F4 nicht kennen? Kiosk Exit Button legt eine schlichte, anpassbare Schließen-Schaltfläche über jede Website, sodass jeder die Kiosksitzung mit einem einzigen Klick beenden kann. Ihre Webseite muss dafür nicht geändert werden.
+
+IDEAL FÜR
+• Kiosks und Terminals mit Touchscreen oder Maus, aber ohne Tastatur
+• Digital Signage und Infobildschirme
+• Messestände und Produktdemos
+• Terminals in Bibliotheken, Museen und Empfangsbereichen
+• Gemeinsam genutzte PCs, deren Nutzer keine Tastenkürzel kennen müssen
+
+FUNKTIONEN
+• Text- oder Bild-Schaltfläche: eigene Beschriftung oder eigenes Bild hochladen (bis 5 MB)
+• Eigener Text und eigene Farbe, passend zu Ihrem Branding
+• Platzierung in jeder Ecke des Bildschirms
+• Größe klein, mittel oder groß
+• Automatisch ausblenden: Die Schaltfläche blendet sich bei Inaktivität aus und erscheint wieder bei Mausbewegung, Berührung oder Tippen auf ihre Ecke
+• Live-Aktualisierung: Gespeicherte Änderungen gelten auch für bereits geöffnete Seiten, ohne Neuladen
+• Erscheint nur in Kiosk- oder Vollbildfenstern und blendet sich aus, sobald das Fenster den Vollbildmodus verlässt
+• Funktioniert offline: Alles ist in der Erweiterung enthalten
+• Einstellungen bleiben über Sitzungen hinweg erhalten
+
+DATENSCHUTZ
+Es werden keine Browserdaten erfasst oder übertragen. Ihre Schaltflächen-Einstellungen werden lokal auf dem Gerät über die Speicher-API von Chrome gespeichert. Die Erweiterung stellt keine Netzwerkanfragen, und nichts verlässt Ihr Gerät.
+
+WARUM IST ZUGRIFF AUF ALLE WEBSITES NÖTIG?
+Chrome verlangt diese Berechtigung, damit die Erweiterung die Schaltfläche über jeder Website anzeigen kann, die Ihr Kiosk gerade darstellt. Sie fügt nur die Schaltfläche und deren Gestaltung hinzu; Seiteninhalte werden weder gelesen noch aufgezeichnet.
+
+OPEN SOURCE
+Quellcode, Fehlermeldungen und Funktionswünsche: https://github.com/DragosPancescu/chrome-kiosk-exit
+
+Wenn Ihnen die Erweiterung Ärger erspart, freue ich mich sehr über eine Bewertung!

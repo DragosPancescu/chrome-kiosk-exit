@@ -1,0 +1,30 @@
+¿Usas Chrome en modo quiosco sin teclado, o con usuarios que no conocen Alt+F4? Kiosk Exit Button añade un botón de cierre limpio y personalizable encima de cualquier sitio web, para que cualquiera pueda terminar la sesión de quiosco con un solo clic. No hace falta modificar tu página web.
+
+IDEAL PARA
+• Quioscos y terminales con pantalla táctil o ratón, pero sin teclado
+• Señalización digital y pantallas informativas
+• Stands de ferias y demostraciones de productos
+• Terminales de bibliotecas, museos y vestíbulos
+• Ordenadores compartidos cuyos usuarios no deberían necesitar atajos de teclado
+
+FUNCIONES
+• Botón de texto o de imagen: usa tu propia etiqueta o sube una imagen personalizada (hasta 5 MB)
+• Texto y color personalizados para que coincidan con tu marca
+• Colócalo en cualquier esquina de la pantalla
+• Tamaño pequeño, mediano o grande
+• Ocultación automática: el botón desaparece tras un tiempo de inactividad y vuelve al mover el ratón, al tocar la pantalla o al tocar su esquina
+• Actualización en vivo: los cambios guardados se aplican a las páginas ya abiertas, sin recargar
+• Solo aparece en ventanas de quiosco o de pantalla completa, y se oculta cuando la ventana sale de pantalla completa
+• Funciona sin conexión: todo viene incluido en la extensión
+• La configuración se conserva entre sesiones
+
+PRIVACIDAD
+No se recopila ni se transmite ningún dato de navegación. La configuración del botón se guarda localmente en el dispositivo mediante la API de almacenamiento de Chrome. La extensión no realiza ninguna solicitud de red y nada sale de tu equipo.
+
+¿POR QUÉ NECESITA ACCESO A TODOS LOS SITIOS WEB?
+Chrome exige este permiso para que la extensión pueda mostrar el botón encima de cualquier sitio que esté mostrando tu quiosco. Solo añade el botón y su estilo; no lee ni registra el contenido de las páginas.
+
+CÓDIGO ABIERTO
+Código fuente, informes de errores y sugerencias: https://github.com/DragosPancescu/chrome-kiosk-exit
+
+Si te ahorra algún dolor de cabeza, ¡una reseña se agradece muchísimo!

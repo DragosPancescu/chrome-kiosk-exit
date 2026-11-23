@@ -1,0 +1,164 @@
+{
+  "htmlLang": {
+    "message": "it"
+  },
+  "extName": {
+    "message": "Kiosk Exit Button: chiudi la modalità kiosk di Chrome senza tastiera"
+  },
+  "extDescription": {
+    "message": "Aggiunge un pulsante di chiusura a schermo alla modalità kiosk di Chrome. Esci con un clic, senza scorciatoie. Personalizzabile."
+  },
+  "popupLoading": {
+    "message": "Caricamento..."
+  },
+  "popupChecking": {
+    "message": "Verifica in corso..."
+  },
+  "popupActive": {
+    "message": "Attivo: modalità kiosk rilevata"
+  },
+  "popupInactive": {
+    "message": "Inattivo: non in modalità kiosk"
+  },
+  "openSettings": {
+    "message": "Apri impostazioni"
+  },
+  "optionsPageTitle": {
+    "message": "Kiosk Exit Button – Opzioni"
+  },
+  "optionsHeading": {
+    "message": "Configurazione di Kiosk Exit Button"
+  },
+  "buyMeCoffee": {
+    "message": "Offrimi un caffè"
+  },
+  "toastClose": {
+    "message": "Chiudi"
+  },
+  "buttonSettings": {
+    "message": "Impostazioni del pulsante"
+  },
+  "buttonType": {
+    "message": "Tipo di pulsante"
+  },
+  "typeText": {
+    "message": "Testo"
+  },
+  "typeImage": {
+    "message": "Immagine"
+  },
+  "textAndColor": {
+    "message": "Testo e colore del pulsante"
+  },
+  "chooseTextColor": {
+    "message": "Scegli il colore del testo"
+  },
+  "buttonImage": {
+    "message": "Immagine del pulsante"
+  },
+  "resetDefault": {
+    "message": "Ripristina predefinita"
+  },
+  "maxFileSize": {
+    "message": "Dimensione massima del file: 5 MB."
+  },
+  "buttonPosition": {
+    "message": "Posizione del pulsante"
+  },
+  "posTopRight": {
+    "message": "In alto a destra"
+  },
+  "posTopLeft": {
+    "message": "In alto a sinistra"
+  },
+  "posBottomRight": {
+    "message": "In basso a destra"
+  },
+  "posBottomLeft": {
+    "message": "In basso a sinistra"
+  },
+  "buttonSize": {
+    "message": "Dimensione del pulsante"
+  },
+  "sizeSmall": {
+    "message": "Piccolo"
+  },
+  "sizeMedium": {
+    "message": "Medio"
+  },
+  "sizeLarge": {
+    "message": "Grande"
+  },
+  "autoHideLabel": {
+    "message": "Nascondi automaticamente dopo (secondi)"
+  },
+  "autoHideHelp": {
+    "message": "Il pulsante si nasconde dopo questo numero di secondi di inattività del mouse. Imposta 0 per tenerlo sempre visibile."
+  },
+  "saveSettings": {
+    "message": "Salva impostazioni"
+  },
+  "livePreview": {
+    "message": "Anteprima dal vivo"
+  },
+  "previewInfo": {
+    "message": "Questa anteprima mostra come apparirà il pulsante di uscita sui siti web. Modifica le impostazioni a sinistra per personalizzarne l'aspetto."
+  },
+  "tipsHeading": {
+    "message": "Suggerimenti:"
+  },
+  "tip1": {
+    "message": "Il pulsante resta sempre nell'angolo dello schermo selezionato"
+  },
+  "tip2": {
+    "message": "I pulsanti di testo funzionano meglio con testi brevi (1-3 caratteri)"
+  },
+  "tip3": {
+    "message": "Per i pulsanti immagine, usa un PNG quadrato e trasparente per risultati ottimali"
+  },
+  "toastSuccessTitle": {
+    "message": "Fatto!"
+  },
+  "toastSavedMessage": {
+    "message": "Le impostazioni sono state salvate."
+  },
+  "toastHeadsUp": {
+    "message": "Attenzione"
+  },
+  "toastLoadFailed": {
+    "message": "Impossibile caricare le impostazioni salvate, vengono mostrati i valori predefiniti."
+  },
+  "toastErrorTitle": {
+    "message": "Errore"
+  },
+  "toastImageNotLoaded": {
+    "message": "Immagine non caricata: $REASON$.",
+    "placeholders": {
+      "reason": {
+        "content": "$1",
+        "example": "the file is not a readable image"
+      }
+    }
+  },
+  "errFileUnreadable": {
+    "message": "impossibile leggere il file"
+  },
+  "errNotImage": {
+    "message": "il file non è un'immagine leggibile"
+  },
+  "toastSaveFailed": {
+    "message": "Impostazioni non salvate: $DETAIL$",
+    "placeholders": {
+      "detail": {
+        "content": "$1",
+        "example": "QUOTA_BYTES quota exceeded"
+      }
+    }
+  },
+  "autoHideInvalid": {
+    "message": "Inserisci un numero intero di secondi tra 0 e 300"
+  },
+  "imageTooLarge": {
+    "message": "Immagine troppo grande. Usa un'immagine inferiore a 5 MB."
+  }
+}

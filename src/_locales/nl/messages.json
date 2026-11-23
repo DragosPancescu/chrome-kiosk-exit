@@ -1,0 +1,164 @@
+{
+  "htmlLang": {
+    "message": "nl"
+  },
+  "extName": {
+    "message": "Kiosk Exit Button: Chrome-kioskmodus sluiten zonder toetsenbord"
+  },
+  "extDescription": {
+    "message": "Voegt een sluitknop op het scherm toe aan de kioskmodus van Chrome. Sluit af met één klik, zonder sneltoetsen. Aanpasbaar."
+  },
+  "popupLoading": {
+    "message": "Laden..."
+  },
+  "popupChecking": {
+    "message": "Controleren..."
+  },
+  "popupActive": {
+    "message": "Actief: kioskmodus gedetecteerd"
+  },
+  "popupInactive": {
+    "message": "Inactief: niet in kioskmodus"
+  },
+  "openSettings": {
+    "message": "Instellingen openen"
+  },
+  "optionsPageTitle": {
+    "message": "Kiosk Exit Button – Opties"
+  },
+  "optionsHeading": {
+    "message": "Kiosk Exit Button configureren"
+  },
+  "buyMeCoffee": {
+    "message": "Trakteer me op een koffie"
+  },
+  "toastClose": {
+    "message": "Sluiten"
+  },
+  "buttonSettings": {
+    "message": "Knopinstellingen"
+  },
+  "buttonType": {
+    "message": "Knoptype"
+  },
+  "typeText": {
+    "message": "Tekst"
+  },
+  "typeImage": {
+    "message": "Afbeelding"
+  },
+  "textAndColor": {
+    "message": "Knoptekst en -kleur"
+  },
+  "chooseTextColor": {
+    "message": "Tekstkleur kiezen"
+  },
+  "buttonImage": {
+    "message": "Knopafbeelding"
+  },
+  "resetDefault": {
+    "message": "Standaard herstellen"
+  },
+  "maxFileSize": {
+    "message": "Maximale bestandsgrootte: 5 MB."
+  },
+  "buttonPosition": {
+    "message": "Knoppositie"
+  },
+  "posTopRight": {
+    "message": "Rechtsboven"
+  },
+  "posTopLeft": {
+    "message": "Linksboven"
+  },
+  "posBottomRight": {
+    "message": "Rechtsonder"
+  },
+  "posBottomLeft": {
+    "message": "Linksonder"
+  },
+  "buttonSize": {
+    "message": "Knopgrootte"
+  },
+  "sizeSmall": {
+    "message": "Klein"
+  },
+  "sizeMedium": {
+    "message": "Middel"
+  },
+  "sizeLarge": {
+    "message": "Groot"
+  },
+  "autoHideLabel": {
+    "message": "Automatisch verbergen na (seconden)"
+  },
+  "autoHideHelp": {
+    "message": "De knop verdwijnt na dit aantal seconden zonder muisactiviteit. Stel in op 0 om hem altijd zichtbaar te houden."
+  },
+  "saveSettings": {
+    "message": "Instellingen opslaan"
+  },
+  "livePreview": {
+    "message": "Live voorbeeld"
+  },
+  "previewInfo": {
+    "message": "Dit voorbeeld laat zien hoe je sluitknop op websites verschijnt. Pas de instellingen links aan om het uiterlijk te wijzigen."
+  },
+  "tipsHeading": {
+    "message": "Tips:"
+  },
+  "tip1": {
+    "message": "De knop blijft altijd in de gekozen hoek van het scherm"
+  },
+  "tip2": {
+    "message": "Tekstknoppen werken het best met korte tekst (1-3 tekens)"
+  },
+  "tip3": {
+    "message": "Gebruik voor afbeeldingsknoppen een transparante, vierkante PNG voor het beste resultaat"
+  },
+  "toastSuccessTitle": {
+    "message": "Gelukt!"
+  },
+  "toastSavedMessage": {
+    "message": "Je instellingen zijn opgeslagen."
+  },
+  "toastHeadsUp": {
+    "message": "Let op"
+  },
+  "toastLoadFailed": {
+    "message": "Opgeslagen instellingen konden niet worden geladen, standaardwaarden worden getoond."
+  },
+  "toastErrorTitle": {
+    "message": "Fout"
+  },
+  "toastImageNotLoaded": {
+    "message": "Afbeelding niet geladen: $REASON$.",
+    "placeholders": {
+      "reason": {
+        "content": "$1",
+        "example": "the file is not a readable image"
+      }
+    }
+  },
+  "errFileUnreadable": {
+    "message": "het bestand kon niet worden gelezen"
+  },
+  "errNotImage": {
+    "message": "het bestand is geen leesbare afbeelding"
+  },
+  "toastSaveFailed": {
+    "message": "Instellingen zijn niet opgeslagen: $DETAIL$",
+    "placeholders": {
+      "detail": {
+        "content": "$1",
+        "example": "QUOTA_BYTES quota exceeded"
+      }
+    }
+  },
+  "autoHideInvalid": {
+    "message": "Voer een geheel aantal seconden in tussen 0 en 300"
+  },
+  "imageTooLarge": {
+    "message": "Afbeelding te groot. Gebruik een afbeelding kleiner dan 5 MB."
+  }
+}

@@ -11,6 +11,8 @@ const buttonPreview = document.getElementById('buttonPreview');
 const buttonAutoHideDelay = document.getElementById('autoHideDelay');
 const saveButton = document.getElementById('save');
 
+const msg = (key, substitutions) => chrome.i18n.getMessage(key, substitutions);
+
 // Shared with the content script, see defaults.js
 const DEFAULTS = globalThis.KIOSK_EXIT_DEFAULTS;
 
@@ -109,7 +111,7 @@ function validateAutoHideDelay(event) {
     const value = Number(raw);
     autoHideDelayValid = raw !== '' && Number.isInteger(value) && value >= 0 && value <= 300;
 
-    buttonAutoHideDelay.setCustomValidity(autoHideDelayValid ? '' : 'Enter a whole number of seconds between 0 and 300');
+    buttonAutoHideDelay.setCustomValidity(autoHideDelayValid ? '' : msg('autoHideInvalid'));
     buttonAutoHideDelay.classList.toggle('is-invalid', !autoHideDelayValid);
     updateSaveEnabled();
 
@@ -126,7 +128,7 @@ function loadSettings() {
         try {
             if (chrome.runtime.lastError) {
                 console.error(`Error loading settings: ${chrome.runtime.lastError.message}`);
-                showToast('Heads up', 'Saved settings could not be loaded, showing defaults.', true);
+                showToast(msg('toastHeadsUp'), msg('toastLoadFailed'), true);
                 items = { ...DEFAULTS };
             }
 
@@ -178,7 +180,7 @@ function readFileAsDataURL(file) {
     return new Promise((resolve, reject) => {
         const reader = new FileReader();
         reader.onload = (e) => resolve(e.target.result);
-        reader.onerror = () => reject(new Error('the file could not be read'));
+        reader.onerror = () => reject(new Error(msg('errFileUnreadable')));
         reader.readAsDataURL(file);
     });
 }
@@ -204,7 +206,7 @@ function downscaleImage(dataUrl) {
             // PNG keeps transparency, which most exit icons rely on
             resolve(canvas.toDataURL('image/png'));
         };
-        img.onerror = () => reject(new Error('the file is not a readable image'));
+        img.onerror = () => reject(new Error(msg('errNotImage')));
 
         img.src = dataUrl;
     });
@@ -216,7 +218,7 @@ async function handleImageUpload() {
     if (!file) return;
 
     if (file.size > 5_000_000) {
-        alert("Image too large. Please use an image under 5 MB.");
+        alert(msg('imageTooLarge'));
         imageUpload.value = "";
         return;
     }
@@ -239,7 +241,7 @@ async function handleImageUpload() {
         if (requestId !== imageRequestId) return;
 
         imageUpload.value = "";
-        showToast('Error', `Image not loaded: ${error.message}.`, true);
+        showToast(msg('toastErrorTitle'), msg('toastImageNotLoaded', error.message), true);
     } finally {
         if (requestId === imageRequestId) {
             imageDecoding = false;
@@ -310,10 +312,10 @@ function saveSettings() {
     chrome.storage.local.set(settings, () => {
         if (chrome.runtime.lastError) {
             console.error(`Error saving settings: ${chrome.runtime.lastError.message}`);
-            showToast('Error', `Settings were not saved: ${chrome.runtime.lastError.message}`, true);
+            showToast(msg('toastErrorTitle'), msg('toastSaveFailed', chrome.runtime.lastError.message), true);
             return;
         }
 
-        showToast('Success!', 'Your settings have been saved.');
+        showToast(msg('toastSuccessTitle'), msg('toastSavedMessage'));
     });
 }

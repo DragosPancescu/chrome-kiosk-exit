@@ -1,0 +1,164 @@
+{
+  "htmlLang": {
+    "message": "ro"
+  },
+  "extName": {
+    "message": "Kiosk Exit Button: închide modul chioșc din Chrome fără tastatură"
+  },
+  "extDescription": {
+    "message": "Adaugă un buton de închidere pe ecran în modul chioșc din Chrome. Ieși cu un clic, fără comenzi rapide. Personalizabil."
+  },
+  "popupLoading": {
+    "message": "Se încarcă..."
+  },
+  "popupChecking": {
+    "message": "Se verifică..."
+  },
+  "popupActive": {
+    "message": "Activ: mod chioșc detectat"
+  },
+  "popupInactive": {
+    "message": "Inactiv: nu este în mod chioșc"
+  },
+  "openSettings": {
+    "message": "Deschide setările"
+  },
+  "optionsPageTitle": {
+    "message": "Kiosk Exit Button – Opțiuni"
+  },
+  "optionsHeading": {
+    "message": "Configurare Kiosk Exit Button"
+  },
+  "buyMeCoffee": {
+    "message": "Cumpără-mi o cafea"
+  },
+  "toastClose": {
+    "message": "Închide"
+  },
+  "buttonSettings": {
+    "message": "Setările butonului"
+  },
+  "buttonType": {
+    "message": "Tipul butonului"
+  },
+  "typeText": {
+    "message": "Text"
+  },
+  "typeImage": {
+    "message": "Imagine"
+  },
+  "textAndColor": {
+    "message": "Textul și culoarea butonului"
+  },
+  "chooseTextColor": {
+    "message": "Alege culoarea textului"
+  },
+  "buttonImage": {
+    "message": "Imaginea butonului"
+  },
+  "resetDefault": {
+    "message": "Revino la implicit"
+  },
+  "maxFileSize": {
+    "message": "Dimensiune maximă fișier: 5 MB."
+  },
+  "buttonPosition": {
+    "message": "Poziția butonului"
+  },
+  "posTopRight": {
+    "message": "Dreapta sus"
+  },
+  "posTopLeft": {
+    "message": "Stânga sus"
+  },
+  "posBottomRight": {
+    "message": "Dreapta jos"
+  },
+  "posBottomLeft": {
+    "message": "Stânga jos"
+  },
+  "buttonSize": {
+    "message": "Dimensiunea butonului"
+  },
+  "sizeSmall": {
+    "message": "Mic"
+  },
+  "sizeMedium": {
+    "message": "Mediu"
+  },
+  "sizeLarge": {
+    "message": "Mare"
+  },
+  "autoHideLabel": {
+    "message": "Ascundere automată după (secunde)"
+  },
+  "autoHideHelp": {
+    "message": "Butonul se ascunde după acest număr de secunde fără activitate a mouse-ului. Setează 0 ca să rămână mereu vizibil."
+  },
+  "saveSettings": {
+    "message": "Salvează setările"
+  },
+  "livePreview": {
+    "message": "Previzualizare live"
+  },
+  "previewInfo": {
+    "message": "Această previzualizare arată cum va apărea butonul de ieșire pe site-uri. Ajustează setările din stânga pentru a-i personaliza aspectul."
+  },
+  "tipsHeading": {
+    "message": "Sfaturi:"
+  },
+  "tip1": {
+    "message": "Butonul rămâne mereu în colțul de ecran selectat"
+  },
+  "tip2": {
+    "message": "Butoanele text arată cel mai bine cu text scurt (1-3 caractere)"
+  },
+  "tip3": {
+    "message": "Pentru butoanele cu imagine, folosește un PNG pătrat și transparent pentru cele mai bune rezultate"
+  },
+  "toastSuccessTitle": {
+    "message": "Gata!"
+  },
+  "toastSavedMessage": {
+    "message": "Setările au fost salvate."
+  },
+  "toastHeadsUp": {
+    "message": "Atenție"
+  },
+  "toastLoadFailed": {
+    "message": "Setările salvate nu au putut fi încărcate; se afișează valorile implicite."
+  },
+  "toastErrorTitle": {
+    "message": "Eroare"
+  },
+  "toastImageNotLoaded": {
+    "message": "Imaginea nu a fost încărcată: $REASON$.",
+    "placeholders": {
+      "reason": {
+        "content": "$1",
+        "example": "the file is not a readable image"
+      }
+    }
+  },
+  "errFileUnreadable": {
+    "message": "fișierul nu a putut fi citit"
+  },
+  "errNotImage": {
+    "message": "fișierul nu este o imagine lizibilă"
+  },
+  "toastSaveFailed": {
+    "message": "Setările nu au fost salvate: $DETAIL$",
+    "placeholders": {
+      "detail": {
+        "content": "$1",
+        "example": "QUOTA_BYTES quota exceeded"
+      }
+    }
+  },
+  "autoHideInvalid": {
+    "message": "Introdu un număr întreg de secunde între 0 și 300"
+  },
+  "imageTooLarge": {
+    "message": "Imagine prea mare. Folosește o imagine sub 5 MB."
+  }
+}

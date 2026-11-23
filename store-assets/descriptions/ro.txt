@@ -1,0 +1,30 @@
+Folosești Chrome în modul chioșc fără tastatură sau cu utilizatori care nu știu de Alt+F4? Kiosk Exit Button adaugă un buton de închidere simplu și personalizabil peste orice site, astfel încât oricine poate încheia sesiunea de chioșc cu un singur clic. Nu e nevoie de nicio modificare a paginii tale.
+
+IDEAL PENTRU
+• Chioșcuri și terminale cu ecran tactil sau mouse, dar fără tastatură
+• Digital signage și ecrane informative
+• Standuri de târguri și demonstrații de produse
+• Terminale din biblioteci, muzee și recepții
+• Calculatoare partajate, ai căror utilizatori n-ar trebui să știe scurtături de tastatură
+
+FUNCȚII
+• Buton cu text sau cu imagine: folosește propria etichetă sau încarcă o imagine personalizată (până la 5 MB)
+• Text și culoare personalizate, potrivite cu identitatea ta vizuală
+• Poziționare în orice colț al ecranului
+• Dimensiune mică, medie sau mare
+• Ascundere automată: butonul dispare după o perioadă de inactivitate și revine la mișcarea mouse-ului, la atingere sau la o atingere pe colțul lui
+• Actualizare în timp real: modificările salvate se aplică paginilor deja deschise, fără reîncărcare
+• Apare doar în ferestrele chioșc sau pe ecran complet și se ascunde când fereastra iese din ecranul complet
+• Funcționează offline: totul este inclus în extensie
+• Setările se păstrează de la o sesiune la alta
+
+CONFIDENȚIALITATE
+Nu se colectează și nu se transmit date de navigare. Setările butonului sunt salvate local pe dispozitiv, prin API-ul de stocare al Chrome. Extensia nu face nicio cerere în rețea și nimic nu părăsește calculatorul tău.
+
+DE CE ARE NEVOIE DE ACCES LA TOATE SITE-URILE?
+Chrome cere această permisiune pentru ca extensia să poată afișa butonul peste orice site afișează chioșcul tău. Adaugă doar butonul și stilul lui; nu citește și nu înregistrează conținutul paginilor.
+
+OPEN SOURCE
+Cod sursă, raportări de erori și cereri de funcții: https://github.com/DragosPancescu/chrome-kiosk-exit
+
+Dacă îți scutește o bătaie de cap, o recenzie e foarte apreciată!

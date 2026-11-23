@@ -1,0 +1,164 @@
+{
+  "htmlLang": {
+    "message": "es"
+  },
+  "extName": {
+    "message": "Kiosk Exit Button: cierra el modo quiosco de Chrome sin teclado"
+  },
+  "extDescription": {
+    "message": "Añade un botón de cierre en pantalla al modo quiosco de Chrome. Sal con un clic, sin atajos de teclado. Personalizable."
+  },
+  "popupLoading": {
+    "message": "Cargando..."
+  },
+  "popupChecking": {
+    "message": "Comprobando..."
+  },
+  "popupActive": {
+    "message": "Activo: modo quiosco detectado"
+  },
+  "popupInactive": {
+    "message": "Inactivo: no está en modo quiosco"
+  },
+  "openSettings": {
+    "message": "Abrir configuración"
+  },
+  "optionsPageTitle": {
+    "message": "Kiosk Exit Button: opciones"
+  },
+  "optionsHeading": {
+    "message": "Configuración de Kiosk Exit Button"
+  },
+  "buyMeCoffee": {
+    "message": "Invítame a un café"
+  },
+  "toastClose": {
+    "message": "Cerrar"
+  },
+  "buttonSettings": {
+    "message": "Ajustes del botón"
+  },
+  "buttonType": {
+    "message": "Tipo de botón"
+  },
+  "typeText": {
+    "message": "Texto"
+  },
+  "typeImage": {
+    "message": "Imagen"
+  },
+  "textAndColor": {
+    "message": "Texto y color del botón"
+  },
+  "chooseTextColor": {
+    "message": "Elegir color del texto"
+  },
+  "buttonImage": {
+    "message": "Imagen del botón"
+  },
+  "resetDefault": {
+    "message": "Restablecer predeterminada"
+  },
+  "maxFileSize": {
+    "message": "Tamaño máximo de archivo: 5 MB."
+  },
+  "buttonPosition": {
+    "message": "Posición del botón"
+  },
+  "posTopRight": {
+    "message": "Arriba a la derecha"
+  },
+  "posTopLeft": {
+    "message": "Arriba a la izquierda"
+  },
+  "posBottomRight": {
+    "message": "Abajo a la derecha"
+  },
+  "posBottomLeft": {
+    "message": "Abajo a la izquierda"
+  },
+  "buttonSize": {
+    "message": "Tamaño del botón"
+  },
+  "sizeSmall": {
+    "message": "Pequeño"
+  },
+  "sizeMedium": {
+    "message": "Mediano"
+  },
+  "sizeLarge": {
+    "message": "Grande"
+  },
+  "autoHideLabel": {
+    "message": "Ocultar automáticamente tras (segundos)"
+  },
+  "autoHideHelp": {
+    "message": "El botón se ocultará tras este número de segundos sin actividad del ratón. Pon 0 para que siempre sea visible."
+  },
+  "saveSettings": {
+    "message": "Guardar configuración"
+  },
+  "livePreview": {
+    "message": "Vista previa en vivo"
+  },
+  "previewInfo": {
+    "message": "Esta vista previa muestra cómo aparecerá tu botón de salida en los sitios web. Ajusta las opciones de la izquierda para personalizar su aspecto."
+  },
+  "tipsHeading": {
+    "message": "Consejos:"
+  },
+  "tip1": {
+    "message": "El botón siempre permanece en la esquina de la pantalla seleccionada"
+  },
+  "tip2": {
+    "message": "Los botones de texto funcionan mejor con textos cortos (1-3 caracteres)"
+  },
+  "tip3": {
+    "message": "Para botones de imagen, usa un PNG cuadrado y transparente para obtener los mejores resultados"
+  },
+  "toastSuccessTitle": {
+    "message": "¡Listo!"
+  },
+  "toastSavedMessage": {
+    "message": "Se ha guardado tu configuración."
+  },
+  "toastHeadsUp": {
+    "message": "Aviso"
+  },
+  "toastLoadFailed": {
+    "message": "No se pudo cargar la configuración guardada; se muestran los valores predeterminados."
+  },
+  "toastErrorTitle": {
+    "message": "Error"
+  },
+  "toastImageNotLoaded": {
+    "message": "Imagen no cargada: $REASON$.",
+    "placeholders": {
+      "reason": {
+        "content": "$1",
+        "example": "the file is not a readable image"
+      }
+    }
+  },
+  "errFileUnreadable": {
+    "message": "no se pudo leer el archivo"
+  },
+  "errNotImage": {
+    "message": "el archivo no es una imagen legible"
+  },
+  "toastSaveFailed": {
+    "message": "No se guardó la configuración: $DETAIL$",
+    "placeholders": {
+      "detail": {
+        "content": "$1",
+        "example": "QUOTA_BYTES quota exceeded"
+      }
+    }
+  },
+  "autoHideInvalid": {
+    "message": "Introduce un número entero de segundos entre 0 y 300"
+  },
+  "imageTooLarge": {
+    "message": "Imagen demasiado grande. Usa una imagen de menos de 5 MB."
+  }
+}

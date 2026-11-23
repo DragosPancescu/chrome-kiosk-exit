@@ -1,0 +1,164 @@
+{
+  "htmlLang": {
+    "message": "pt-BR"
+  },
+  "extName": {
+    "message": "Kiosk Exit Button: feche o modo quiosque do Chrome sem teclado"
+  },
+  "extDescription": {
+    "message": "Adiciona um botão de fechar na tela ao modo quiosque do Chrome. Saia com um clique, sem atalhos de teclado. Personalizável."
+  },
+  "popupLoading": {
+    "message": "Carregando..."
+  },
+  "popupChecking": {
+    "message": "Verificando..."
+  },
+  "popupActive": {
+    "message": "Ativo: modo quiosque detectado"
+  },
+  "popupInactive": {
+    "message": "Inativo: fora do modo quiosque"
+  },
+  "openSettings": {
+    "message": "Abrir configurações"
+  },
+  "optionsPageTitle": {
+    "message": "Kiosk Exit Button – Opções"
+  },
+  "optionsHeading": {
+    "message": "Configuração do Kiosk Exit Button"
+  },
+  "buyMeCoffee": {
+    "message": "Me pague um café"
+  },
+  "toastClose": {
+    "message": "Fechar"
+  },
+  "buttonSettings": {
+    "message": "Configurações do botão"
+  },
+  "buttonType": {
+    "message": "Tipo de botão"
+  },
+  "typeText": {
+    "message": "Texto"
+  },
+  "typeImage": {
+    "message": "Imagem"
+  },
+  "textAndColor": {
+    "message": "Texto e cor do botão"
+  },
+  "chooseTextColor": {
+    "message": "Escolher cor do texto"
+  },
+  "buttonImage": {
+    "message": "Imagem do botão"
+  },
+  "resetDefault": {
+    "message": "Restaurar padrão"
+  },
+  "maxFileSize": {
+    "message": "Tamanho máximo do arquivo: 5 MB."
+  },
+  "buttonPosition": {
+    "message": "Posição do botão"
+  },
+  "posTopRight": {
+    "message": "Superior direito"
+  },
+  "posTopLeft": {
+    "message": "Superior esquerdo"
+  },
+  "posBottomRight": {
+    "message": "Inferior direito"
+  },
+  "posBottomLeft": {
+    "message": "Inferior esquerdo"
+  },
+  "buttonSize": {
+    "message": "Tamanho do botão"
+  },
+  "sizeSmall": {
+    "message": "Pequeno"
+  },
+  "sizeMedium": {
+    "message": "Médio"
+  },
+  "sizeLarge": {
+    "message": "Grande"
+  },
+  "autoHideLabel": {
+    "message": "Ocultar automaticamente após (segundos)"
+  },
+  "autoHideHelp": {
+    "message": "O botão será ocultado após esse número de segundos sem atividade do mouse. Use 0 para mantê-lo sempre visível."
+  },
+  "saveSettings": {
+    "message": "Salvar configurações"
+  },
+  "livePreview": {
+    "message": "Prévia ao vivo"
+  },
+  "previewInfo": {
+    "message": "Esta prévia mostra como seu botão de saída vai aparecer nos sites. Ajuste as configurações à esquerda para personalizar a aparência."
+  },
+  "tipsHeading": {
+    "message": "Dicas:"
+  },
+  "tip1": {
+    "message": "O botão sempre fica no canto da tela selecionado"
+  },
+  "tip2": {
+    "message": "Botões de texto funcionam melhor com textos curtos (1 a 3 caracteres)"
+  },
+  "tip3": {
+    "message": "Para botões de imagem, use um PNG quadrado e transparente para melhores resultados"
+  },
+  "toastSuccessTitle": {
+    "message": "Pronto!"
+  },
+  "toastSavedMessage": {
+    "message": "Suas configurações foram salvas."
+  },
+  "toastHeadsUp": {
+    "message": "Atenção"
+  },
+  "toastLoadFailed": {
+    "message": "Não foi possível carregar as configurações salvas; exibindo os valores padrão."
+  },
+  "toastErrorTitle": {
+    "message": "Erro"
+  },
+  "toastImageNotLoaded": {
+    "message": "Imagem não carregada: $REASON$.",
+    "placeholders": {
+      "reason": {
+        "content": "$1",
+        "example": "the file is not a readable image"
+      }
+    }
+  },
+  "errFileUnreadable": {
+    "message": "não foi possível ler o arquivo"
+  },
+  "errNotImage": {
+    "message": "o arquivo não é uma imagem legível"
+  },
+  "toastSaveFailed": {
+    "message": "As configurações não foram salvas: $DETAIL$",
+    "placeholders": {
+      "detail": {
+        "content": "$1",
+        "example": "QUOTA_BYTES quota exceeded"
+      }
+    }
+  },
+  "autoHideInvalid": {
+    "message": "Digite um número inteiro de segundos entre 0 e 300"
+  },
+  "imageTooLarge": {
+    "message": "Imagem muito grande. Use uma imagem com menos de 5 MB."
+  }
+}
